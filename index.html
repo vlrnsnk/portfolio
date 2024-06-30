@@ -146,7 +146,34 @@
       </ul>
       <button class="btn">View All</button>
     </section>
-    <section class="contact"></section>
+    <section class="contact">
+      <h2 class="title">Get In Touch</h2>
+      <p class="subtitle">Let's collaborate</p>
+      <form class="contact-form" action="#">
+        <p class="field-group">
+          <label for="name"></label>
+          <input id="name" name="name" type="text" placeholder="Full Name">
+        </p>
+        <p class="field-group">
+          <label for="email"></label>
+          <input id="email" name="email" type="text" placeholder="example@email.com">
+        </p>
+        <p class="field-group">
+          <label for="service"></label>
+          <select>
+            <option value="" placeholder="Select a service"></option>
+            <option value="front-end">Front-End Development</option>
+            <option value="back-end">Back-End Development</option>
+            <option value="database">Database Development</option>
+          </select>
+        </p>
+        <p class="field-group">
+          <label for="message"></label>
+          <textarea name="message" id="message" placeholder="Write your message here"></textarea>
+        </p>
+        <button type="submit">Get In Touch</button>
+      </form>
+    </section>
   </main>
   <footer class="footer"></footer>
 </body>
