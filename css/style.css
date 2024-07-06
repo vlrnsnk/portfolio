@@ -63,6 +63,7 @@
   --button-background-color: #484e53;
   --menu-text-color: #c1c1c1;
   --secondary-color: #4fc3f7;
+  --secondary-color-darken: #0984bb;
   --form-input-text-color: #8987a1;
 }
 
@@ -94,6 +95,13 @@ body {
   margin: 0 auto;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 34px;
+}
+
 .navigation-logo {
   font-family: "Oleo Script", "Brush Script MT", fantasy;
   font-size: 32px;
@@ -108,11 +116,29 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  gap: 30px;
 }
 
 .navigation-link {
   text-decoration: none;
   color: var(--menu-text-color);
+  padding: 10px 10px;
+}
+
+.navigation-link:hover {
+  color: var(--secondary-color);
+  transition: color .2s ease-out;
+}
+
+.navigation-link:focus {
+  /*outline: 2px solid var(--secondary-color-darken);*/
+}
+
+.navigation-link:active {
+  color: var(--secondary-color-darken);
 }
 
 .navigation-link--active {
@@ -126,10 +152,50 @@ body {
   line-height: 18px;
   text-decoration: none;
   color: var(--main-text-color);
+  background-color: var(--background-color);
+  padding: 14px 19px;
+  border-radius: 9px;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition: color .2s ease-out, border-color .2s ease-out;
+}
+
+.btn:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color-darken);
+}
+
+.btn:focus,
+.btn:active {
+  /*outline: 2px solid var(--secondary-color-darken);*/
+}
+
+.btn:active {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 .theme-switch {
   background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+.theme-switch__icon {
+  color: var(--main-text-color);
+  transition: color .2s ease-out;
+}
+
+.theme-switch__icon:hover {
+  color: var(--secondary-color);
+}
+
+.theme-switch__icon:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.theme-switch__icon:active {
+  color: var(--secondary-color-darken)
 }
 
 .hero__avatar {
