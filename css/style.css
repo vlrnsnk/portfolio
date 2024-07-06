@@ -38,6 +38,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Oleo Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oleo-script-regular.woff2") format("woff2");
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -48,6 +55,16 @@
 
 :root {
   --background-color: #1a1a1a;
+  --headings-color: #ffffff;
+  --main-text-color: #e1e1e1;
+  --secondary-text-color: #a9a9a9;
+  --tertiary-text-color: #c9c9c9;
+  --menu-text-color: #c1c1c1;
+  --secondary-color: #4fc3f7;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -55,3 +72,45 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--background-color);
 }
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  font-family: "Oleo Script", "Brush Script MT", fantasy;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.navigation-list {
+  list-style-type: none;
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: var(--menu-text-color);
+}
+
+.navigation-link--active {
+  color: var(--secondary-color);
+}
+
+.btn {
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.theme-switch {
+  background-color: var(--background-color);
+}
+
