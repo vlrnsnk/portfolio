@@ -262,13 +262,13 @@ body {
   font-size: 17px;
   line-height: 25px;
   color: var(--main-text-color);
+  text-align: center;
 }
 
 .hero__description {
   font-size: 19px;
   line-height: 30px;
   max-width: 793px;
-  text-align: center;
   padding-bottom: 40px;
 }
 
@@ -297,6 +297,23 @@ body {
   border-radius: 500px;
   background: linear-gradient(0, #1a1a1a 0%, transparent 70%);
   pointer-events: none;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 220px;
+}
+
+.about__subtitle {
+  margin-bottom: 22px;
+}
+
+.about__description {
+  max-width: 840px;
+  padding-bottom: 38px;
 }
 
 .services-list {
