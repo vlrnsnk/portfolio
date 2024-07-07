@@ -159,7 +159,7 @@ body {
   color: var(--main-text-color);
   background-color: var(--background-color);
   padding: 14px 19px;
-  border-radius: 9px;
+  border-radius: 75px;
   border: 1px solid var(--secondary-color);
   cursor: pointer;
   transition: color .2s ease-out, border-color .2s ease-out;
@@ -178,6 +178,10 @@ body {
 .btn:active {
   background-color: var(--secondary-color);
   color: var(--background-color);
+}
+
+.btn__navigation-contact {
+  border-radius: 9px;
 }
 
 .theme-switch {
@@ -201,6 +205,13 @@ body {
 
 .theme-switch__icon:active {
   color: var(--secondary-color-darken)
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 171px;
 }
 
 .hero__avatar {
@@ -236,6 +247,7 @@ body {
 .hero__subtitle {
   font-size: 26px;
   line-height: 39px;
+  padding-bottom: 8px;
 }
 
 .subtitle__emoji {
@@ -253,6 +265,13 @@ body {
 .hero__description {
   font-size: 19px;
   line-height: 30px;
+  max-width: 793px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.hero__button {
+  margin-bottom: 103px;
 }
 
 .services-list {
