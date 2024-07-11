@@ -528,6 +528,10 @@ body {
   border: none;
 }
 
+.contact-form__btn:active {
+  color: var(--background-color);
+}
+
 .footer {
   padding-bottom: 45px;
 }
@@ -578,7 +582,6 @@ body {
 }
 
 .social-icon {
-  /*color: #484E53;*/
   border-radius: 50%;
   color: var(--secondary-text-color);
   transition: color .2s ease-out,
