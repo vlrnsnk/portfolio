@@ -373,6 +373,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 220px;
 }
 
 .projects__subtitle {
@@ -474,12 +475,29 @@ body {
   height: 39px;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 220px;
+}
+
+.contact__subtitle {
+  margin-bottom: 80px;
+}
+
+.contact-form {
+  width: 696px;
+}
+
 .contact-form__label {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   color: var(--headings-color);
+  display: block;
+  margin-bottom: 16px;
 }
 
 .contact-form__input,
@@ -490,6 +508,24 @@ body {
   font-size: 20px;
   line-height: 30px;
   color: var(--form-input-text-color);
+  margin-bottom: 16px;
+  background-color: var(--background-color);
+  padding: 20px 29px;
+  border-radius: 10px;
+  border: 1px solid #D6DDED;
+  width: 100%;
+}
+
+.contact-form__textarea {
+  min-height: 250px;
+}
+
+.contact-form__btn {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--main-text-color);
+  color: var(--background-color);
+  border: none;
 }
 
 .footer__text {
