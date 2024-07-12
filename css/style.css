@@ -250,11 +250,13 @@ body {
   background-image: linear-gradient(to right, var(--secondary-color), var(--main-text-color));
   color: transparent;
   background-clip: text;
+  margin-bottom: 60px;
 }
 
 .hero__subtitle {
   font-size: 26px;
   line-height: 39px;
+  margin-bottom: 0;
 }
 
 .subtitle__emoji {
@@ -309,7 +311,7 @@ body {
 }
 
 .about__subtitle {
-  margin-bottom: 22px;
+  /*margin-bottom: 22px;*/
 }
 
 .about__description {
@@ -325,7 +327,7 @@ body {
 }
 
 .services__subtitle {
-  margin-bottom: 80px;
+  /*margin-bottom: 80px;*/
 }
 
 .services__list {
@@ -378,7 +380,7 @@ body {
 }
 
 .projects__subtitle {
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .projects__tabs-list {
@@ -485,7 +487,11 @@ body {
 }
 
 .contact__subtitle {
-  margin-bottom: 80px;
+  /*margin-bottom: 80px;*/
+}
+
+.contact-form__field-group {
+  margin-bottom: 16px;
 }
 
 .contact-form {
@@ -510,7 +516,6 @@ body {
   font-size: 20px;
   line-height: 30px;
   color: var(--form-input-text-color);
-  margin-bottom: 16px;
   background-color: var(--background-color);
   padding: 20px 29px;
   border-radius: 10px;
