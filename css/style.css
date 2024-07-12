@@ -543,6 +543,11 @@ body {
   padding-bottom: 40px;
 }
 
+.footer__top,
+.footer__bottom {
+  padding: 0 40px;
+}
+
 .footer__top {
   display: flex;
   justify-content: space-between;
