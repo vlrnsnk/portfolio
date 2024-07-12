@@ -95,14 +95,14 @@ body {
   margin: 0 auto;
 }
 
-.navigation {
+.main-navigation {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 34px;
 }
 
-.navigation-logo {
+.logo {
   font-family: "Oleo Script", "Brush Script MT", fantasy;
   font-size: 32px;
   line-height: 44px;
@@ -110,7 +110,7 @@ body {
   text-decoration: none;
 }
 
-.navigation-list {
+.site-navigation {
   list-style-type: none;
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
@@ -122,30 +122,30 @@ body {
   gap: 30px;
 }
 
-.navigation-link {
+.site-navigation__link {
   text-decoration: none;
   color: var(--menu-text-color);
   padding: 10px 10px;
 }
 
-.navigation-link:hover {
+.site-navigation__link:hover {
   color: var(--secondary-color);
   transition: color .2s ease-out;
 }
 
-.navigation-link:focus {
+.site-navigation__link:focus {
   /*outline: 2px solid var(--secondary-color-darken);*/
 }
 
-.navigation-link:active {
+.site-navigation__link:active {
   color: var(--secondary-color-darken);
 }
 
-.navigation-link--active {
+.site-navigation__link--active {
   color: var(--secondary-color);
 }
 
-.navigation-right-wrapper {
+.main-navigation__right-wrapper {
   display: flex;
   gap: 30px;
 }
@@ -180,7 +180,7 @@ body {
   color: var(--background-color);
 }
 
-.btn__navigation-contact {
+.btn--navigation-contact {
   border-radius: 9px;
 }
 
@@ -272,10 +272,6 @@ body {
   padding-bottom: 40px;
 }
 
-.hero__button {
-  /*margin-bottom: 227px;*/
-}
-
 .hero__grid {
   height: 764px;
   width: 1025px;
@@ -327,7 +323,7 @@ body {
   margin-bottom: 80px;
 }
 
-.services-list {
+.services__list {
   font-family: "Inter", "Tahoma", sans-serif;
   list-style-type: none;
   display: flex;
@@ -336,7 +332,7 @@ body {
   padding: 0;
 }
 
-.services-item {
+.services__item {
   width: 294px;
   padding: 24px;
   border: 1px solid #444444;
@@ -344,7 +340,7 @@ body {
   background-color: #2B2B2B;
 }
 
-.services-icon {
+.services__icon {
   width: 44px;
   height: 44px;
   padding: 13px;
@@ -354,7 +350,7 @@ body {
   color: var(--background-color);
 }
 
-.services-title {
+.services__title {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -362,7 +358,7 @@ body {
   margin-bottom: 18px;
 }
 
-.services-description {
+.services__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -380,7 +376,7 @@ body {
   margin-bottom: 40px;
 }
 
-.projects-tabs-list {
+.projects__tabs-list {
   list-style-type: none;
   display: flex;
   gap: 55px;
@@ -388,7 +384,7 @@ body {
   padding: 0;
 }
 
-.projects-tabs-button {
+.projects__tabs-button {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -404,7 +400,7 @@ body {
     border-color .2s ease-out;
 }
 
-.projects-tabs-button:hover {
+.projects-tabs__button:hover {
   background-color: var(--button-background-color);
   color: var(--quaternary-text-color);
 }
@@ -423,7 +419,7 @@ body {
   color: var(--quaternary-text-color);
 }
 
-.projects-list {
+.projects__list {
   display: flex;
   gap: 38px;
   flex-wrap: wrap;
@@ -431,6 +427,7 @@ body {
   padding: 0;
   max-width: 1144px;
   margin-bottom: 80px;
+  list-style-type: none;
 }
 
 .project-card {
@@ -438,7 +435,7 @@ body {
   margin-bottom: 80px;
 }
 
-.project-card-image {
+.project-card__image {
   display: block;
   object-fit: contain;
   max-width: 100%;
@@ -451,7 +448,7 @@ body {
   grid-template-rows: 30px 37px;
 }
 
-.project-card-description {
+.project-card__description {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -459,7 +456,7 @@ body {
   color: var(--menu-text-color);
 }
 
-.project-card-tech-used {
+.project-card__tech-used {
   font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -469,7 +466,7 @@ body {
   align-self: end;
 }
 
-.project-card-url {
+.project-card__url {
   align-self: end;
   justify-self: end;
   height: 39px;
@@ -520,7 +517,7 @@ body {
   min-height: 250px;
 }
 
-.contact-form__btn {
+.btn--contact-form {
   width: 100%;
   border-radius: 10px;
   background-color: var(--main-text-color);
@@ -528,7 +525,7 @@ body {
   border: none;
 }
 
-.contact-form__btn:active {
+.btn--contact-form:active {
   color: var(--background-color);
 }
 
@@ -574,25 +571,25 @@ body {
   color: var(--secondary-text-color);
 }
 
-.social-list {
+.social {
   list-style-type: none;
   display: flex;
   padding: 0;
   gap: 21px;
 }
 
-.social-icon {
+.social__icon {
   border-radius: 50%;
   color: var(--secondary-text-color);
   transition: color .2s ease-out,
     background-color .2s ease-out;
 }
 
-.social-icon:hover {
+.social__icon:hover {
   color: var(--secondary-color);
 }
 
-.social-icon:active {
+.social__icon:active {
   background-color: var(--secondary-color);
   color: var(--background-color);
 }
