@@ -91,7 +91,7 @@ body {
 }
 
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -150,7 +150,7 @@ body {
   gap: 30px;
 }
 
-.btn {
+.button {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -165,22 +165,22 @@ body {
   transition: color .2s ease-out, border-color .2s ease-out;
 }
 
-.btn:hover {
+.button:hover {
   color: var(--secondary-color);
   border-color: var(--secondary-color-darken);
 }
 
-.btn:focus,
-.btn:active {
+.button:focus,
+.button:active {
   /*outline: 2px solid var(--secondary-color-darken);*/
 }
 
-.btn:active {
+.button:active {
   background-color: var(--secondary-color);
   color: var(--background-color);
 }
 
-.btn--navigation-contact {
+.button--navigation-contact {
   border-radius: 9px;
 }
 
@@ -527,7 +527,7 @@ body {
   min-height: 250px;
 }
 
-.btn--contact-form {
+.button--contact-form {
   width: 100%;
   border-radius: 10px;
   background-color: var(--main-text-color);
@@ -535,7 +535,7 @@ body {
   border: none;
 }
 
-.btn--contact-form:active {
+.button--contact-form:active {
   color: var(--background-color);
 }
 
