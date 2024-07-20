@@ -8,6 +8,8 @@
     "browser-sync": "^3.0.2",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
     "stylelint": "^16.7.0",
     "stylelint-config-htmlacademy": "^4.2.3"
   },
