@@ -6,6 +6,7 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 import {deleteSync} from 'del';
+import minify from 'gulp-html-minifier-terser';
 
 gulp.task('server', () => {
   browserSync({
@@ -26,6 +27,7 @@ gulp.task('styles', () => {
 
 gulp.task('html', () => {
   return gulp.src('src/*.html')
+    .pipe(minify({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'))
 });
 
