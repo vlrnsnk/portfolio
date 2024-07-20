@@ -1,0 +1,43 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 160px;
+}
+
+.contact-form__field-group {
+  margin-bottom: 16px;
+}
+
+.contact-form {
+  width: 696px;
+}
+
+.contact-form__label {
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--headings-color);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  font-family: "Inter", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--form-input-text-color);
+  background-color: var(--background-color);
+  padding: 20px 29px;
+  border-radius: 10px;
+  border: 1px solid #d6dded;
+  width: 100%;
+}
+
+.contact-form__textarea {
+  min-height: 250px;
+}

@@ -25,7 +25,7 @@ gulp.task('server', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('src/sass/**/*.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))

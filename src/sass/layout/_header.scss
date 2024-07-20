@@ -1,0 +1,74 @@
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 34px;
+}
+
+.logo {
+  font-family: "Oleo Script", "Brush Script MT", fantasy;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.site-navigation {
+  list-style-type: none;
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  gap: 30px;
+}
+
+.site-navigation__link {
+  text-decoration: none;
+  color: var(--menu-text-color);
+  padding: 10px;
+}
+
+.site-navigation__link:hover {
+  color: var(--secondary-color);
+  transition: color 0.2s ease-out;
+}
+
+.site-navigation__link:active {
+  color: var(--secondary-color-darken);
+}
+
+.site-navigation__link--active {
+  color: var(--secondary-color);
+}
+
+.main-navigation__right-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.theme-switch {
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+.theme-switch__icon {
+  color: var(--main-text-color);
+  transition: color 0.2s ease-out;
+}
+
+.theme-switch__icon:hover {
+  color: var(--secondary-color);
+}
+
+.theme-switch__icon:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.theme-switch__icon:active {
+  color: var(--secondary-color-darken);
+}

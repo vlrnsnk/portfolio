@@ -1,0 +1,42 @@
+.button {
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+  padding: 14px 19px;
+  border-radius: 75px;
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition:
+    color 0.2s ease-out,
+    border-color 0.2s ease-out;
+}
+
+.button:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color-darken);
+}
+
+.button:active {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.button--navigation-contact {
+  border-radius: 9px;
+}
+
+.button--contact-form {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--main-text-color);
+  color: var(--background-color);
+  border: none;
+}
+
+.button--contact-form:active {
+  color: var(--background-color);
+}

@@ -1,0 +1,12 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 160px;
+}
+
+.about__description {
+  max-width: 840px;
+  padding-bottom: 38px;
+}
