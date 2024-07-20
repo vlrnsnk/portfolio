@@ -9,7 +9,8 @@ import {deleteSync} from 'del';
 import minify from 'gulp-html-minifier-terser';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import cssnanoPlugin from 'cssnano';
+import cssnano from 'cssnano';
+import sourcemap from 'gulp-sourcemaps';
 
 gulp.task('server', () => {
   browserSync({
@@ -23,11 +24,13 @@ gulp.task('server', () => {
 
 gulp.task('styles', () => {
   return gulp.src('src/sass/**/*.scss')
+    .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
-      cssnanoPlugin(),
+      cssnano(),
     ]))
+    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
