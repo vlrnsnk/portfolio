@@ -57,9 +57,7 @@
 .social__icon {
   border-radius: 50%;
   color: abstracts.$color-text-secondary;
-  transition:
-    color 0.2s ease-out,
-    background-color 0.2s ease-out;
+  @include abstracts.transition(color, background-color);
 }
 
 .social__icon:hover {

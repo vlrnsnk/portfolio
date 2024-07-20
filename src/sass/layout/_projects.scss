@@ -26,10 +26,7 @@
   border-radius: 50px;
   border: 1px solid abstracts.$highlight-button-primary;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease-out,
-    color 0.2s ease-out,
-    border-color 0.2s ease-out;
+  @include abstracts.transition(background-color, color, border-color);
 }
 
 .projects-tabs-button:hover {

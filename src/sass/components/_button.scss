@@ -12,9 +12,7 @@
   border-radius: 75px;
   border: 1px solid abstracts.$color-brand-primary;
   cursor: pointer;
-  transition:
-    color 0.2s ease-out,
-    border-color 0.2s ease-out;
+  @include abstracts.transition(color, border-color);
 }
 
 .button:hover {

@@ -35,7 +35,7 @@
 
 .site-navigation__link:hover {
   color: abstracts.$color-brand-primary;
-  transition: color 0.2s ease-out;
+  @include abstracts.transition(color);
 }
 
 .site-navigation__link:active {
@@ -59,7 +59,7 @@
 
 .theme-switch__icon {
   color: abstracts.$color-text-primary;
-  transition: color 0.2s ease-out;
+  @include abstracts.transition(color);
 }
 
 .theme-switch__icon:hover {
