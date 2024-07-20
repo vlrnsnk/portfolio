@@ -76,8 +76,8 @@
   height: 764px;
   width: 1025px;
   background-image:
-    repeating-linear-gradient(abstracts.$color-text-quaternary 0 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, abstracts.$color-text-quaternary 0 1px, transparent 1px 100%);
+    repeating-linear-gradient(abstracts.$color-text-tertiary 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, abstracts.$color-text-tertiary 0 1px, transparent 1px 100%);
   background-size: 64px 64px;
   position: absolute;
   margin: 0 auto;
@@ -92,6 +92,6 @@
   height: 100%;
   width: 100%;
   border-radius: 500px;
-  background: linear-gradient(to top, abstracts.$color-hero-grid 0%, transparent 70%);
+  background: linear-gradient(to top, abstracts.$color-background 0%, transparent 70%);
   pointer-events: none;
 }

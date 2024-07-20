@@ -34,7 +34,7 @@
 
 .projects-tabs-button:hover {
   background-color: abstracts.$highlight-button-primary;
-  color: abstracts.$color-text-tertiary;
+  color: abstracts.$color-text-primary;
 }
 
 .projects-tabs-button:active {
@@ -44,7 +44,7 @@
 
 .projects-tabs-button--active {
   background-color: abstracts.$highlight-button-primary;
-  color: abstracts.$color-text-tertiary;
+  color: abstracts.$color-text-primary;
 }
 
 .projects__list {
@@ -81,7 +81,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  color: abstracts.$color-text-quaternary;
+  color: abstracts.$color-text-tertiary;
 }
 
 .project-card__tech-used {
