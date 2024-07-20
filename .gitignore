@@ -5,3 +5,5 @@
 !/**/.gitkeep
 
 /node_modules
+/
+/build

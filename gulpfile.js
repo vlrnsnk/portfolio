@@ -7,7 +7,7 @@ const sass = require('gulp-sass')(require('sass'));
 gulp.task('server', () => {
   browserSync({
     server: {
-      baseDir: 'src/',
+      baseDir: 'build/',
     }
   });
 
@@ -17,12 +17,17 @@ gulp.task('server', () => {
 gulp.task('styles', () => {
   return gulp.src('src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('html', () => {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('build'))
 });
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
 });
 
-gulp.task('default', gulp.parallel('styles', 'server', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'server', 'html', 'watch'));
