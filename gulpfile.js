@@ -9,6 +9,7 @@ import {deleteSync} from 'del';
 import minify from 'gulp-html-minifier-terser';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import cssnanoPlugin from 'cssnano';
 
 gulp.task('server', () => {
   browserSync({
@@ -25,6 +26,7 @@ gulp.task('styles', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
+      cssnanoPlugin(),
     ]))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
