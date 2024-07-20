@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .footer {
   padding-bottom: 40px;
 }
@@ -19,11 +21,11 @@
   font-weight: 500;
   font-size: 63px;
   line-height: 67px;
-  color: var(--headings-color);
+  color: abstracts.$color-heading;
 }
 
 .horizontal-divider {
-  background-color: #484e53;
+  background-color: abstracts.$highlight-button-primary;
   height: 1px;
   border: none;
 }
@@ -42,7 +44,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: var(--secondary-text-color);
+  color: abstracts.$color-text-secondary;
 }
 
 .social {
@@ -54,17 +56,17 @@
 
 .social__icon {
   border-radius: 50%;
-  color: var(--secondary-text-color);
+  color: abstracts.$color-text-secondary;
   transition:
     color 0.2s ease-out,
     background-color 0.2s ease-out;
 }
 
 .social__icon:hover {
-  color: var(--secondary-color);
+  color: abstracts.$color-brand-primary;
 }
 
 .social__icon:active {
-  background-color: var(--secondary-color);
-  color: var(--background-color);
+  background-color: abstracts.$highlight-brand-primary;
+  color: abstracts.$color-background;
 }

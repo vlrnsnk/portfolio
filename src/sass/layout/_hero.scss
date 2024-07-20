@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,7 @@
   font-weight: 700;
   font-size: 45px;
   line-height: 68px;
-  color: var(--headings-color);
+  color: abstracts.$color-heading;
 }
 
 .hero__title {
@@ -38,7 +40,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  background-image: linear-gradient(to right, var(--secondary-color), var(--main-text-color));
+  background-image: linear-gradient(to right, abstracts.$color-brand-primary, abstracts.$color-text-primary);
   color: transparent;
   background-clip: text;
   margin-bottom: 60px;
@@ -59,7 +61,7 @@
   font-weight: 500;
   font-size: 17px;
   line-height: 25px;
-  color: var(--main-text-color);
+  color: abstracts.$color-text-primary;
   text-align: center;
 }
 
@@ -74,8 +76,8 @@
   height: 764px;
   width: 1025px;
   background-image:
-    repeating-linear-gradient(var(--menu-text-color) 0 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, var(--menu-text-color) 0 1px, transparent 1px 100%);
+    repeating-linear-gradient(abstracts.$color-text-quaternary 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, abstracts.$color-text-quaternary 0 1px, transparent 1px 100%);
   background-size: 64px 64px;
   position: absolute;
   margin: 0 auto;
@@ -90,6 +92,6 @@
   height: 100%;
   width: 100%;
   border-radius: 500px;
-  background: linear-gradient(to top, #1a1a1a 0%, transparent 70%);
+  background: linear-gradient(to top, abstracts.$color-hero-grid 0%, transparent 70%);
   pointer-events: none;
 }

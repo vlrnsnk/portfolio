@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .services {
   display: flex;
   flex-direction: column;
@@ -17,26 +19,26 @@
 .services__item {
   width: 294px;
   padding: 24px;
-  border: 1px solid #444444;
+  border: 1px solid abstracts.$color-service-item-border;
   border-radius: 10px;
-  background-color: #2b2b2b;
+  background-color: abstracts.$color-service-item-background;
 }
 
 .services__icon {
   width: 44px;
   height: 44px;
   padding: 13px;
-  background-color: #f5f8ff;
+  background-color: abstracts.$color-service-icon-background;
   border-radius: 9px;
   margin-bottom: 19px;
-  color: var(--background-color);
+  color: abstracts.$color-background;
 }
 
 .services__title {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: var(--headings-color);
+  color: abstracts.$color-heading;
   margin-bottom: 18px;
 }
 
@@ -44,5 +46,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: var(--main-text-color);
+  color: abstracts.$color-text-primary;
 }

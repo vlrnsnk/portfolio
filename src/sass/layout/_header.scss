@@ -1,3 +1,4 @@
+@use "../abstracts";
 
 .main-navigation {
   display: flex;
@@ -10,7 +11,7 @@
   font-family: "Oleo Script", "Brush Script MT", fantasy;
   font-size: 32px;
   line-height: 44px;
-  color: var(--main-text-color);
+  color: abstracts.$color-text-primary;
   text-decoration: none;
 }
 
@@ -28,21 +29,21 @@
 
 .site-navigation__link {
   text-decoration: none;
-  color: var(--menu-text-color);
+  color: abstracts.$color-text-quaternary;
   padding: 10px;
 }
 
 .site-navigation__link:hover {
-  color: var(--secondary-color);
+  color: abstracts.$color-brand-primary;
   transition: color 0.2s ease-out;
 }
 
 .site-navigation__link:active {
-  color: var(--secondary-color-darken);
+  color: abstracts.$highlight-brand-primary;
 }
 
 .site-navigation__link--active {
-  color: var(--secondary-color);
+  color: abstracts.$color-brand-primary;
 }
 
 .main-navigation__right-wrapper {
@@ -51,24 +52,24 @@
 }
 
 .theme-switch {
-  background-color: var(--background-color);
+  background-color: abstracts.$color-background;
   border: none;
   cursor: pointer;
 }
 
 .theme-switch__icon {
-  color: var(--main-text-color);
+  color: abstracts.$color-text-primary;
   transition: color 0.2s ease-out;
 }
 
 .theme-switch__icon:hover {
-  color: var(--secondary-color);
+  color: abstracts.$color-brand-primary;
 }
 
 .theme-switch__icon:focus {
-  outline: 2px solid var(--secondary-color);
+  outline: 2px solid abstracts.$color-brand-primary;
 }
 
 .theme-switch__icon:active {
-  color: var(--secondary-color-darken);
+  color: abstracts.$highlight-brand-primary;
 }

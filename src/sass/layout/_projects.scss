@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -18,11 +20,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: var(--secondary-text-color);
-  background-color: var(--background-color);
+  color: abstracts.$color-text-secondary;
+  background-color: abstracts.$color-background;
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid #484e53;
+  border: 1px solid abstracts.$highlight-button-primary;
   cursor: pointer;
   transition:
     background-color 0.2s ease-out,
@@ -30,19 +32,19 @@
     border-color 0.2s ease-out;
 }
 
-.projects-tabs__button:hover {
-  background-color: var(--button-background-color);
-  color: var(--quaternary-text-color);
+.projects-tabs-button:hover {
+  background-color: abstracts.$highlight-button-primary;
+  color: abstracts.$color-text-tertiary;
 }
 
 .projects-tabs-button:active {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  color: abstracts.$color-brand-primary;
+  border-color: abstracts.$color-brand-primary;
 }
 
-.projects-tabs-button__active {
-  background-color: var(--button-background-color);
-  color: var(--quaternary-text-color);
+.projects-tabs-button--active {
+  background-color: abstracts.$highlight-button-primary;
+  color: abstracts.$color-text-tertiary;
 }
 
 .projects__list {
@@ -79,7 +81,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  color: var(--menu-text-color);
+  color: abstracts.$color-text-quaternary;
 }
 
 .project-card__tech-used {
@@ -87,7 +89,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: var(--secondary-text-color);
+  color: abstracts.$color-text-secondary;
   grid-column: 1 / 2;
   align-self: end;
 }

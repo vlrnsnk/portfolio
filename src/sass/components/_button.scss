@@ -1,14 +1,16 @@
+@use "../abstracts";
+
 .button {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   text-decoration: none;
-  color: var(--main-text-color);
-  background-color: var(--background-color);
+  color: abstracts.$color-text-primary;
+  background-color: abstracts.$color-background;
   padding: 14px 19px;
   border-radius: 75px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid abstracts.$color-brand-primary;
   cursor: pointer;
   transition:
     color 0.2s ease-out,
@@ -16,13 +18,13 @@
 }
 
 .button:hover {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color-darken);
+  color: abstracts.$color-brand-primary;
+  border-color: abstracts.$highlight-brand-primary;
 }
 
 .button:active {
-  background-color: var(--secondary-color);
-  color: var(--background-color);
+  background-color: abstracts.$color-brand-primary;
+  color: abstracts.$color-background;
 }
 
 .button--navigation-contact {
@@ -32,11 +34,11 @@
 .button--contact-form {
   width: 100%;
   border-radius: 10px;
-  background-color: var(--main-text-color);
-  color: var(--background-color);
+  background-color: abstracts.$color-text-primary;
+  color: abstracts.$color-background;
   border: none;
 }
 
 .button--contact-form:active {
-  color: var(--background-color);
+  color: abstracts.$color-background;
 }
