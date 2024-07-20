@@ -3,3 +3,5 @@
 /.idea
 
 !/**/.gitkeep
+
+/node_modules
