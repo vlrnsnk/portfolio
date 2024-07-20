@@ -45,7 +45,9 @@
   src: url("../fonts/oleo-script-regular.woff2") format("woff2");
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -125,16 +127,12 @@ body {
 .site-navigation__link {
   text-decoration: none;
   color: var(--menu-text-color);
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 .site-navigation__link:hover {
   color: var(--secondary-color);
-  transition: color .2s ease-out;
-}
-
-.site-navigation__link:focus {
-  /*outline: 2px solid var(--secondary-color-darken);*/
+  transition: color 0.2s ease-out;
 }
 
 .site-navigation__link:active {
@@ -162,17 +160,14 @@ body {
   border-radius: 75px;
   border: 1px solid var(--secondary-color);
   cursor: pointer;
-  transition: color .2s ease-out, border-color .2s ease-out;
+  transition:
+    color 0.2s ease-out,
+    border-color 0.2s ease-out;
 }
 
 .button:hover {
   color: var(--secondary-color);
   border-color: var(--secondary-color-darken);
-}
-
-.button:focus,
-.button:active {
-  /*outline: 2px solid var(--secondary-color-darken);*/
 }
 
 .button:active {
@@ -192,7 +187,7 @@ body {
 
 .theme-switch__icon {
   color: var(--main-text-color);
-  transition: color .2s ease-out;
+  transition: color 0.2s ease-out;
 }
 
 .theme-switch__icon:hover {
@@ -204,7 +199,7 @@ body {
 }
 
 .theme-switch__icon:active {
-  color: var(--secondary-color-darken)
+  color: var(--secondary-color-darken);
 }
 
 .hero {
@@ -282,14 +277,15 @@ body {
 .hero__grid {
   height: 764px;
   width: 1025px;
-  background-image: repeating-linear-gradient(var(--menu-text-color) 0 1px, transparent 1px 100%),
+  background-image:
+    repeating-linear-gradient(var(--menu-text-color) 0 1px, transparent 1px 100%),
     repeating-linear-gradient(90deg, var(--menu-text-color) 0 1px, transparent 1px 100%);
   background-size: 64px 64px;
   position: absolute;
   margin: 0 auto;
   z-index: -10;
   border-radius: 500px;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 .hero__grid::after {
@@ -298,7 +294,7 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 500px;
-  background: linear-gradient(0, #1a1a1a 0%, transparent 70%);
+  background: linear-gradient(to top, #1a1a1a 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -308,10 +304,6 @@ body {
   align-items: center;
   padding-top: 50px;
   padding-bottom: 160px;
-}
-
-.about__subtitle {
-  /*margin-bottom: 22px;*/
 }
 
 .about__description {
@@ -324,10 +316,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 160px;
-}
-
-.services__subtitle {
-  /*margin-bottom: 80px;*/
 }
 
 .services__list {
@@ -344,7 +332,7 @@ body {
   padding: 24px;
   border: 1px solid #444444;
   border-radius: 10px;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
 }
 
 .services__icon {
@@ -379,10 +367,6 @@ body {
   padding-bottom: 160px;
 }
 
-.projects__subtitle {
-  /*margin-bottom: 40px;*/
-}
-
 .projects__tabs-list {
   list-style-type: none;
   display: flex;
@@ -400,20 +384,17 @@ body {
   background-color: var(--background-color);
   padding: 16px 32px;
   border-radius: 50px;
-  border: 1px solid #484E53;
+  border: 1px solid #484e53;
   cursor: pointer;
-  transition: background-color .2s ease-out,
-    color .2s ease-out,
-    border-color .2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    color 0.2s ease-out,
+    border-color 0.2s ease-out;
 }
 
 .projects-tabs__button:hover {
   background-color: var(--button-background-color);
   color: var(--quaternary-text-color);
-}
-
-.projects-tabs-button:focus {
-
 }
 
 .projects-tabs-button:active {
@@ -474,8 +455,7 @@ body {
 }
 
 .project-card__url {
-  align-self: end;
-  justify-self: end;
+  place-self: end;
   height: 39px;
 }
 
@@ -484,10 +464,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 160px;
-}
-
-.contact__subtitle {
-  /*margin-bottom: 80px;*/
 }
 
 .contact-form__field-group {
@@ -519,7 +495,7 @@ body {
   background-color: var(--background-color);
   padding: 20px 29px;
   border-radius: 10px;
-  border: 1px solid #D6DDED;
+  border: 1px solid #d6dded;
   width: 100%;
 }
 
@@ -564,7 +540,7 @@ body {
 }
 
 .horizontal-divider {
-  background-color: #484E53;
+  background-color: #484e53;
   height: 1px;
   border: none;
 }
@@ -596,8 +572,9 @@ body {
 .social__icon {
   border-radius: 50%;
   color: var(--secondary-text-color);
-  transition: color .2s ease-out,
-    background-color .2s ease-out;
+  transition:
+    color 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 
 .social__icon:hover {
