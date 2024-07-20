@@ -11,6 +11,7 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import sourcemap from 'gulp-sourcemaps';
+import plumber from 'gulp-plumber';
 
 gulp.task('server', () => {
   browserSync({
@@ -24,6 +25,7 @@ gulp.task('server', () => {
 
 gulp.task('styles', () => {
   return gulp.src('src/sass/**/*.scss')
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -69,5 +71,4 @@ gulp.task('copy', () => {
   // done();
 });
 
-// gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'server', 'html', 'fonts', 'watch'));
-gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'server', 'html', 'watch'));
+gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'html', 'server', 'watch'));
