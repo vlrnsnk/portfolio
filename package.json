@@ -33,5 +33,12 @@
     "url": "https://github.com/vlrnsnk/portfolio/issues"
   },
   "homepage": "https://github.com/vlrnsnk/portfolio#readme",
-  "type": "module"
+  "type": "module",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
