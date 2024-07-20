@@ -1,8 +1,11 @@
 'use strict';
 
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
-const sass = require('gulp-sass')(require('sass'));
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
+import {deleteSync} from 'del';
 
 gulp.task('server', () => {
   browserSync({
@@ -36,7 +39,7 @@ gulp.task('watch', () => {
 });
 
 gulp.task('clean', () => {
-  return delete('build')
+  return deleteSync('build')
 });
 
 gulp.task('default', gulp.parallel('clean', 'styles', 'server', 'html', 'fonts', 'watch'));

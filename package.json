@@ -6,6 +6,7 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "browser-sync": "^3.0.2",
+    "del": "^7.1.0",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
     "gulp-sass": "^5.1.0",
@@ -26,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/vlrnsnk/portfolio/issues"
   },
-  "homepage": "https://github.com/vlrnsnk/portfolio#readme"
+  "homepage": "https://github.com/vlrnsnk/portfolio#readme",
+  "type": "module"
 }
