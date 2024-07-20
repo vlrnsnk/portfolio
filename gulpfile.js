@@ -12,6 +12,7 @@ import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import sourcemap from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
+import rename from 'gulp-rename';
 
 gulp.task('server', () => {
   browserSync({
@@ -32,6 +33,7 @@ gulp.task('styles', () => {
       autoprefixer(),
       cssnano(),
     ]))
+    .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
