@@ -7,6 +7,8 @@ import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 import {deleteSync} from 'del';
 import minify from 'gulp-html-minifier-terser';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
 
 gulp.task('server', () => {
   browserSync({
@@ -21,6 +23,9 @@ gulp.task('server', () => {
 gulp.task('styles', () => {
   return gulp.src('src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
