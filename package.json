@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Valeriy Anysenko's Portfolio Website",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlrnsnk/portfolio.git"
+  },
+  "author": "vlrnsnk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlrnsnk/portfolio/issues"
+  },
+  "homepage": "https://github.com/vlrnsnk/portfolio#readme"
+}
