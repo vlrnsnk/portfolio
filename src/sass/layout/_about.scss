@@ -2,11 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
   padding-bottom: 160px;
+}
+
+.about__subtitle {
+  margin-bottom: 32px;
 }
 
 .about__description {
   max-width: 840px;
-  padding-bottom: 38px;
+  padding-bottom: 24px;
+}
+
+.about__description--last {
+  padding-bottom: 32px;
 }

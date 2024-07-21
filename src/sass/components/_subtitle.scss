@@ -3,10 +3,14 @@
 .subtitle {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 1.5;
   background-image: linear-gradient(to right, abstracts.$color-brand-primary, abstracts.$color-text-primary);
   color: transparent;
   background-clip: text;
-  margin-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1000px) {
+    font-size: 24px;
+  }
 }
