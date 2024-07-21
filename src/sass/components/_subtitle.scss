@@ -1,0 +1,12 @@
+@use "../abstracts";
+
+.subtitle {
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  background-image: linear-gradient(to right, abstracts.$color-brand-primary, abstracts.$color-text-primary);
+  color: transparent;
+  background-clip: text;
+  margin-bottom: 60px;
+}
