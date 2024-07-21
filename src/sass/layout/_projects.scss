@@ -4,25 +4,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 160px;
+  padding-bottom: 64px;
+}
+
+.projects__subtitle {
+  margin-bottom: 32px;
 }
 
 .projects__tabs-list {
   list-style-type: none;
   display: flex;
-  gap: 55px;
-  margin-bottom: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   padding: 0;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 1000px) {
+    margin-bottom: 80px;
+    gap: 55px;
+  }
 }
 
 .projects__tabs-button {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 1.5;
   color: abstracts.$color-text-secondary;
   background-color: abstracts.$color-background;
-  padding: 16px 32px;
+  padding: 11px 16px;
   border-radius: 50px;
   border: 1px solid abstracts.$highlight-button-primary;
   cursor: pointer;
@@ -44,54 +55,65 @@
   color: abstracts.$color-text-primary;
 }
 
-.projects__list {
+.project {
   display: flex;
-  gap: 38px;
+  // flex-direction: column;
+  gap: 32px;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-  max-width: 1144px;
-  margin-bottom: 80px;
+  padding-bottom: 32px;
   list-style-type: none;
+
+  @media screen and (min-width: 1000px) {
+    max-width: 1144px;
+  }
 }
 
-.project-card {
-  width: 356px;
-  margin-bottom: 80px;
+.project__item {
+  // margin-bottom: 80px;
+
+  @media screen and (min-width: 1000px) {
+    width: 356px;
+  }
 }
 
-.project-card__image {
+.project__image {
   display: block;
   object-fit: contain;
   max-width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
-.project-card__wrapper {
+.project__wrapper {
   display: grid;
-  grid-template-columns: 283px auto;
-  grid-template-rows: 30px 37px;
+  grid-template-columns: auto 1fr;
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 283px auto;
+    grid-template-rows: 30px 37px;
+  }
 }
 
-.project-card__description {
+.project__name {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 1.5;
   color: abstracts.$color-text-tertiary;
 }
 
-.project-card__tech-used {
+.project__tech-used {
   font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 1.5;
   color: abstracts.$color-text-secondary;
   grid-column: 1 / 2;
   align-self: end;
 }
 
-.project-card__url {
+.project__url {
   place-self: end;
   height: 39px;
 }
