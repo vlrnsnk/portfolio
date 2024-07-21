@@ -1,0 +1,50 @@
+@use "../abstracts";
+
+.hamburger-wrapper{
+  cursor: pointer;
+  padding: 15px 9px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.hamburger {
+  cursor: pointer;
+  background-color: abstracts.$color-heading;
+  border: none;
+  border-radius: 1px;
+  width: 32px;
+  height: 2px;
+  @include abstracts.transition(background-color);
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: abstracts.$color-heading;
+    border-radius: 1px;
+    width: 16px;
+    height: 2px;
+    display: block;
+    @include abstracts.transition(background-color);
+  }
+
+  &::before {
+    transform: translate(-6px, -9px);
+  }
+
+  &::after {
+    transform: translate(10px, 5px);
+  }
+
+  &:hover,
+  &:hover::before,
+  &:hover::after {
+    background-color: abstracts.$color-brand-primary;
+  }
+
+  &:active,
+  &:active::before,
+  &:active::after {
+    background-color: abstracts.$highlight-brand-primary;
+  }
+}
