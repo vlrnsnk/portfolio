@@ -16,6 +16,7 @@
   width: 32px;
   height: 2px;
   @include abstracts.transition(background-color);
+  padding: 0;
 
   &::before,
   &::after {
@@ -29,11 +30,11 @@
   }
 
   &::before {
-    transform: translate(-6px, -9px);
+    transform: translate(0, -8px);
   }
 
   &::after {
-    transform: translate(10px, 5px);
+    transform: translate(16px, 6px);
   }
 
   &:hover,
