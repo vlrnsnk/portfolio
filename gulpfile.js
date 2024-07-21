@@ -21,7 +21,7 @@ gulp.task('server', () => {
     }
   });
 
-  gulp.watch("src/*.html").on('change', browserSync.reload);
+  gulp.watch("build/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('styles', () => {
@@ -52,6 +52,7 @@ gulp.task('fonts', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/*.html', gulp.series('html'));
 });
 
 gulp.task('clean', () => {
