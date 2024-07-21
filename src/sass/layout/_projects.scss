@@ -57,7 +57,6 @@
 
 .project {
   display: flex;
-  // flex-direction: column;
   gap: 32px;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,11 +66,13 @@
 
   @media screen and (min-width: 1000px) {
     max-width: 1144px;
+    flex-direction: column;
   }
 }
 
 .project__item {
-  // margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 1000px) {
     width: 356px;

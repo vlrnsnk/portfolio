@@ -26,16 +26,19 @@
 }
 
 .service__item {
-  width: 294px;
   padding: 24px;
   border: 1px solid abstracts.$highlight-button-primary;
   border-radius: 10px;
   background-color: abstracts.$color-service-item-background;
+
+  @media screen and (min-width: 1000px) {
+    width: 294px;
+  }
 }
 
 .service__header-wrapper {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
@@ -52,11 +55,11 @@
 
 .service__title {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   color: abstracts.$color-heading;
   margin-bottom: 18px;
-  text-align: right;
+  // text-align: right;
 }
 
 .service__description {
