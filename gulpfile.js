@@ -45,11 +45,6 @@ gulp.task('html', () => {
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('fonts', () => {
-  return gulp.src('src/fonts/**/*', { encoding: false })
-    .pipe(gulp.dest('build/fonts'))
-});
-
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
@@ -65,6 +60,7 @@ gulp.task('copy', () => {
     'src/*.ico',
     'src/fonts/**/*',
     'src/img/favicons/*',
+    'src/img/*',
   ], {
     encoding: false,
     base: 'src',
