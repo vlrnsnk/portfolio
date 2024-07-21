@@ -29,15 +29,3 @@
 .button--navigation-contact {
   border-radius: 9px;
 }
-
-.button--contact-form {
-  width: 100%;
-  border-radius: 10px;
-  background-color: abstracts.$color-text-primary;
-  color: abstracts.$color-background;
-  border: none;
-}
-
-.button--contact-form:active {
-  color: abstracts.$color-background;
-}

@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 160px;
+  padding-bottom: 64px;
+}
+
+.contact__subtitle {
+  margin-bottom: 32px;
 }
 
 .contact-form__field-group {
@@ -12,14 +16,18 @@
 }
 
 .contact-form {
-  width: 696px;
+  width: 100%;
+
+  @media screen and (min-width: 1000px) {
+    width: 696px;
+  }
 }
 
 .contact-form__label {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16x;
+  line-height: 1.5;
   color: abstracts.$color-heading;
   display: block;
   margin-bottom: 16px;
@@ -30,16 +38,33 @@
 .contact-form__textarea {
   font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 1.5;
   color: abstracts.$color-text-form-input;
   background-color: abstracts.$color-background;
-  padding: 20px 29px;
+  padding: 11px 18px;
   border-radius: 10px;
   border: 1px solid abstracts.$color-heading;
   width: 100%;
+
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+    padding: 20px 29px;
+  }
 }
 
 .contact-form__textarea {
   min-height: 250px;
+}
+
+.contact-form__button {
+  width: 100%;
+  border-radius: 10px;
+  background-color: abstracts.$color-text-primary;
+  color: abstracts.$color-background;
+  border: none;
+}
+
+.contact-form__button:active {
+  color: abstracts.$color-background;
 }
