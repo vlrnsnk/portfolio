@@ -37,12 +37,12 @@
 
   &__header-wrapper {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     gap: 16px;
   }
 
   &__icon {
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 13px;
