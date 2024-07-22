@@ -10,6 +10,15 @@
   @media screen and (min-width: 1000px) {
     padding-top: 40px;
   }
+
+  &__right-wrapper {
+    display: none;
+    gap: 30px;
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+    }
+  }
 }
 
 .logo {
@@ -39,33 +48,24 @@
   @media screen and (min-width: 1000px) {
     display: flex;
   }
-}
 
-.site-navigation__link {
-  text-decoration: none;
-  color: abstracts.$color-text-tertiary;
-  padding: 10px;
-}
+  &__link {
+    text-decoration: none;
+    color: abstracts.$color-text-tertiary;
+    padding: 10px;
 
-.site-navigation__link:hover {
-  color: abstracts.$color-brand-primary;
-  @include abstracts.transition(color);
-}
+    &:hover {
+      color: abstracts.$color-brand-primary;
+      @include abstracts.transition(color);
+    }
 
-.site-navigation__link:active {
-  color: abstracts.$highlight-brand-primary;
-}
+    &:active {
+      color: abstracts.$highlight-brand-primary;
+    }
 
-.site-navigation__link--active {
-  color: abstracts.$color-brand-primary;
-}
-
-.main-navigation__right-wrapper {
-  display: none;
-  gap: 30px;
-
-  @media screen and (min-width: 1000px) {
-    display: flex;
+    &--active {
+      color: abstracts.$color-brand-primary;
+    }
   }
 }
 
@@ -73,21 +73,21 @@
   background-color: abstracts.$color-background;
   border: none;
   cursor: pointer;
-}
 
-.theme-switch__icon {
-  color: abstracts.$color-text-primary;
-  @include abstracts.transition(color);
-}
+  &__icon {
+    color: abstracts.$color-text-primary;
+    @include abstracts.transition(color);
 
-.theme-switch__icon:hover {
-  color: abstracts.$color-brand-primary;
-}
+    &:hover {
+      color: abstracts.$color-brand-primary;
+    }
 
-.theme-switch__icon:focus {
-  outline: 2px solid abstracts.$color-brand-primary;
-}
+    &:focus {
+      outline: 2px solid abstracts.$color-brand-primary;
+    }
 
-.theme-switch__icon:active {
-  color: abstracts.$highlight-brand-primary;
+    &:active {
+      color: abstracts.$highlight-brand-primary;
+    }
+  }
 }

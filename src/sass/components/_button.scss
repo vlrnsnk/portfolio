@@ -14,18 +14,18 @@
   border: 1px solid abstracts.$color-brand-primary;
   cursor: pointer;
   @include abstracts.transition(color, border-color);
-}
 
-.button:hover {
-  color: abstracts.$color-brand-primary;
-  border-color: abstracts.$highlight-brand-primary;
-}
+  &:hover {
+    color: abstracts.$color-brand-primary;
+    border-color: abstracts.$highlight-brand-primary;
+  }
 
-.button:active {
-  background-color: abstracts.$color-brand-primary;
-  color: abstracts.$color-background;
-}
+  &:active {
+    background-color: abstracts.$color-brand-primary;
+    color: abstracts.$color-background;
+  }
 
-.button--navigation-contact {
-  border-radius: 9px;
+  &--navigation-contact {
+    border-radius: 9px;
+  }
 }

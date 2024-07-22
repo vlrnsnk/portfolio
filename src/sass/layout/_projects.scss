@@ -5,54 +5,54 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
-}
 
-.projects__subtitle {
-  margin-bottom: 32px;
-}
-
-.projects__tabs-list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding: 0;
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 1000px) {
-    margin-bottom: 80px;
-    gap: 55px;
+  &__subtitle {
+    margin-bottom: 32px;
   }
-}
 
-.projects__tabs-button {
-  font-family: "Poppins", "Verdana", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: abstracts.$color-text-secondary;
-  background-color: abstracts.$color-background;
-  padding: 11px 16px;
-  border-radius: 50px;
-  border: 1px solid abstracts.$highlight-button-primary;
-  cursor: pointer;
-  @include abstracts.transition(background-color, color, border-color);
-}
+  &__tabs-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    margin-bottom: 32px;
 
-.projects__tabs-button:hover {
-  background-color: abstracts.$highlight-button-primary;
-  color: abstracts.$color-text-primary;
-}
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 80px;
+      gap: 55px;
+    }
+  }
 
-.projects__tabs-button:active {
-  color: abstracts.$color-brand-primary;
-  border-color: abstracts.$color-brand-primary;
-}
+  &__tabs-button {
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: abstracts.$color-text-secondary;
+    background-color: abstracts.$color-background;
+    padding: 11px 16px;
+    border-radius: 50px;
+    border: 1px solid abstracts.$highlight-button-primary;
+    cursor: pointer;
+    @include abstracts.transition(background-color, color, border-color);
 
-.projects__tabs-button--active {
-  background-color: abstracts.$highlight-button-primary;
-  color: abstracts.$color-text-primary;
+    &:hover {
+      background-color: abstracts.$highlight-button-primary;
+      color: abstracts.$color-text-primary;
+    }
+
+    &:active {
+      color: abstracts.$color-brand-primary;
+      border-color: abstracts.$color-brand-primary;
+    }
+
+    &--active {
+      background-color: abstracts.$highlight-button-primary;
+      color: abstracts.$color-text-primary;
+    }
+  }
 }
 
 .project {
@@ -68,54 +68,54 @@
     max-width: 1144px;
     flex-direction: column;
   }
-}
 
-.project__item {
-  display: flex;
-  flex-direction: column;
+  &__item {
+    display: flex;
+    flex-direction: column;
 
-  @media screen and (min-width: 1000px) {
-    width: 356px;
+    @media screen and (min-width: 1000px) {
+      width: 356px;
+    }
   }
-}
 
-.project__image {
-  display: block;
-  object-fit: contain;
-  max-width: 100%;
-  margin-bottom: 16px;
-}
-
-.project__wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 32px;
-
-  @media screen and (min-width: 1000px) {
-    grid-template-columns: 283px auto;
-    grid-template-rows: 30px 37px;
+  &__image {
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    margin-bottom: 16px;
   }
-}
 
-.project__name {
-  font-family: "Poppins", "Verdana", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.5;
-  color: abstracts.$color-text-tertiary;
-}
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 32px;
 
-.project__tech-used {
-  font-family: "Inter", "Tahoma", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: abstracts.$color-text-secondary;
-  grid-column: 1 / 2;
-  align-self: end;
-}
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: 283px auto;
+      grid-template-rows: 30px 37px;
+    }
+  }
 
-.project__url {
-  place-self: end;
-  height: 39px;
+  &__name {
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    color: abstracts.$color-text-tertiary;
+  }
+
+  &__tech-used {
+    font-family: "Inter", "Tahoma", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: abstracts.$color-text-secondary;
+    grid-column: 1 / 2;
+    align-self: end;
+  }
+
+  &__url {
+    place-self: end;
+    height: 39px;
+  }
 }

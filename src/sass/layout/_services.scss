@@ -5,10 +5,10 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
-}
 
-.services__subtitle {
-  margin-bottom: 32px;
+  &__subtitle {
+    margin-bottom: 32px;
+  }
 }
 
 .service {
@@ -23,49 +23,48 @@
     flex-direction: row;
     width: 922px;
   }
-}
 
-.service__item {
-  padding: 24px;
-  border: 1px solid abstracts.$highlight-button-primary;
-  border-radius: 10px;
-  background-color: abstracts.$color-service-item-background;
+  &__item {
+    padding: 24px;
+    border: 1px solid abstracts.$highlight-button-primary;
+    border-radius: 10px;
+    background-color: abstracts.$color-service-item-background;
 
-  @media screen and (min-width: 1000px) {
-    width: 294px;
+    @media screen and (min-width: 1000px) {
+      width: 294px;
+    }
   }
-}
 
-.service__header-wrapper {
-  display: flex;
-  // justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
+  &__header-wrapper {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
 
-.service__icon {
-  width: 44px;
-  height: 44px;
-  padding: 13px;
-  background-color: abstracts.$color-heading;
-  border-radius: 9px;
-  margin-bottom: 19px;
-  color: abstracts.$color-background;
-}
+  &__icon {
+    width: 44px;
+    height: 44px;
+    padding: 13px;
+    background-color: abstracts.$color-heading;
+    border-radius: 9px;
+    margin-bottom: 19px;
+    color: abstracts.$color-background;
+  }
 
-.service__title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5;
-  color: abstracts.$color-heading;
-  margin-bottom: 18px;
-  // text-align: right;
-}
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: abstracts.$color-heading;
+    margin-bottom: 18px;
+  }
 
-.service__description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: justify;
-  color: abstracts.$color-text-primary;
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    color: abstracts.$color-text-primary;
+  }
 }

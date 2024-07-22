@@ -1,13 +1,5 @@
 @use "../abstracts";
 
-.hamburger-wrapper{
-  cursor: pointer;
-  padding: 23px 8px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-}
-
 .hamburger {
   cursor: pointer;
   background-color: abstracts.$color-heading;
@@ -17,6 +9,14 @@
   height: 2px;
   @include abstracts.transition(background-color);
   padding: 0;
+
+  &:-wrapper {
+    cursor: pointer;
+    padding: 23px 8px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+  }
 
   &::before,
   &::after {
