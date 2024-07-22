@@ -23,13 +23,12 @@
   }
 
   &__subtitle {
-    margin-bottom: 32px;
-
     &-wrapper {
       display: flex;
-      justify-content: center;
+      align-items: center;
       padding-bottom: 8px;
       gap: 8px;
+      margin-bottom: 32px;
     }
 
     &-emoji {
