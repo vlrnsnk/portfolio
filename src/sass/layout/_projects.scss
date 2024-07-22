@@ -89,6 +89,7 @@
 .project__wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: 32px;
 
   @media screen and (min-width: 1000px) {
     grid-template-columns: 283px auto;
