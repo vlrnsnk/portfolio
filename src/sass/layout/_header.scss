@@ -7,16 +7,32 @@
   padding-top: 8px;
   padding-bottom: 24px;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: abstracts.$sm) {
+    padding-top: 16px;
+  }
+
+  @media screen and (min-width: abstracts.$md) {
+    padding-top: 24px;
+  }
+
+  @media screen and (min-width: abstracts.$lg) {
+    padding-top: 32px;
+  }
+
+  @media screen and (min-width: abstracts.$xlg) {
     padding-top: 40px;
+  }
+
+  @media screen and (min-width: abstracts.$xxlg) {
+    padding-top: 48px;
   }
 
   &__right-wrapper {
     display: none;
-    gap: 30px;
 
-    @media screen and (min-width: 1000px) {
-      display: flex;
+    @media screen and (min-width: abstracts.$lg) {
+      display: block;
+      width: 101px;
     }
   }
 }
@@ -29,24 +45,33 @@
   line-height: 1.375;
   padding-left: 8px;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: abstracts.$lg) {
     font-size: 32px;
   }
 }
 
 .site-navigation {
   display: none;
-  list-style-type: none;
-  font-family: "Poppins", "Verdana", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  align-items: center;
-  padding-left: 0;
-  gap: 30px;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: abstracts.$lg) {
+    // margin-left: auto;
+    // margin-right: 57px;
+    margin: 0 auto;
+
     display: flex;
+    // justify-content: space-between;
+    list-style-type: none;
+    font-family: "Poppins", "Verdana", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.375;
+    align-items: center;
+    padding-left: 0;
+    gap: 8px;
+  }
+
+  @media screen and (min-width: abstracts.$xlg) {
+    gap: 16px;
   }
 
   &__link {
@@ -72,9 +97,12 @@
 .theme-switch {
   background-color: abstracts.$color-background;
   border: none;
-  cursor: pointer;
+  margin-left: auto;
+  display: block;
 
   &__icon {
+    cursor: pointer;
+
     color: abstracts.$color-text-primary;
     @include abstracts.transition(color);
 

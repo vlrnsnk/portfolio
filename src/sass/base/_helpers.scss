@@ -16,10 +16,10 @@
 .container {
   width: 100%;
   padding: 0 16px;
-  margin: 0 auto;
 
   @media screen and (min-width: abstracts.$sm) {
     max-width: 540px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: abstracts.$md) {
