@@ -18,3 +18,10 @@ $highlight-brand-primary: color.scale($color-brand-primary, $lightness: -30%);
 $highlight-button-primary: #484e53;
 
 /* Active state */
+
+/* Breakpoints */
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+$xxlg: 1400px;
