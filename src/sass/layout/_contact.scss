@@ -74,6 +74,8 @@
 
     &__textarea {
       min-height: 250px;
+      resize: none;
+      width: 100%;
     }
 
     &__button {
