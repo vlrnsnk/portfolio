@@ -14,14 +14,14 @@
 .service {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   font-family: "Inter", "Tahoma", sans-serif;
   list-style-type: none;
   padding: 0;
 
   @media screen and (min-width: abstracts.$lg) {
     flex-direction: row;
-    // width: 922px;
+    gap: 32px;
   }
 
   &__item {
