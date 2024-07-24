@@ -18,7 +18,7 @@
     gap: 16px;
     margin-bottom: 32px;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: abstracts.$md) {
       flex-direction: row;
     }
   }
@@ -30,8 +30,8 @@
     line-height: 1;
     color: abstracts.$color-heading;
 
-    @media screen and (min-width: 1000px) {
-      font-size: 63px;
+    @media screen and (min-width: abstracts.$md) {
+      // font-size: 63px;
     }
   }
 
@@ -45,8 +45,8 @@
     align-items: center;
     gap: 24px;
 
-    @media screen and (min-width: 1000px) {
-      flex-direction: row;
+    @media screen and (min-width: abstracts.$md) {
+      flex-direction: row-reverse;
       justify-content: space-between;
     }
   }

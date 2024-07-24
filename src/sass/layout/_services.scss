@@ -19,9 +19,9 @@
   list-style-type: none;
   padding: 0;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: abstracts.$lg) {
     flex-direction: row;
-    width: 922px;
+    // width: 922px;
   }
 
   &__item {

@@ -64,12 +64,26 @@
     border-radius: 500px;
     opacity: 0.1;
 
-    @media screen and (min-width: 1000px) {
-      width: 1025px;
-      height: 764px;
-      background-size: 64px 64px;
+    @media screen and (min-width: abstracts.$sm) {
+      background-size: calc((abstracts.$sm - 2 * (16px) - 37px) / 6) calc((abstracts.$sm - 2 * (16px) - 37px) / 6);
     }
 
+    @media screen and (min-width: abstracts.$md) {
+      background-size: calc((abstracts.$md - 2 * (32px) - 49px) / 8) calc((abstracts.$md - 2 * (16px) - 49px) / 8);
+    }
+
+    @media screen and (min-width: abstracts.$lg) {
+      background-size: calc((abstracts.$lg - 2 * (64px) - 33px) / 10) calc((abstracts.$lg - 2 * (16px) - 33px) / 10);
+    }
+
+    @media screen and (min-width: abstracts.$xlg) {
+      background-size: calc((abstracts.$xlg - 2 * (96px) - 61px) / 11) calc((abstracts.$xlg - 2 * (96px) - 61px) / 11);
+    }
+
+    @media screen and (min-width: abstracts.$xxlg) {
+      background-size: calc((abstracts.$xxlg - 2 * (96px) - 81px) / 12) calc((abstracts.$xxlg - 2 * (96px) - 61px) / 11);
+    }
+  
     &::after {
       position: absolute;
       content: "";
