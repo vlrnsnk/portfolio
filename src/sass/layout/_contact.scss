@@ -32,7 +32,6 @@
     }
 
     &__input,
-    &__select,
     &__textarea {
       font-family: "Inter", "Tahoma", sans-serif;
       font-weight: 400;
@@ -45,9 +44,13 @@
       border: 1px solid abstracts.$color-heading;
       width: 100%;
 
-      @media screen and (min-width: 1000px) {
+      @media screen and (min-width: abstracts.$lg) {
         font-size: 20px;
         padding: 20px 29px;
+      }
+
+      &:focus {
+        outline-color: abstracts.$color-brand-primary;
       }
     }
 

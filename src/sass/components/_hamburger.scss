@@ -41,6 +41,10 @@
     transform: translate(16px, 6px);
   }
 
+  &:focus {
+    outline-color: abstracts.$color-brand-primary;
+  }
+
   &:hover,
   &:hover::before,
   &:hover::after {

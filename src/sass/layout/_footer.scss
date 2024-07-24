@@ -48,6 +48,7 @@
     @media screen and (min-width: abstracts.$md) {
       flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -69,6 +70,10 @@
       color: abstracts.$color-brand-primary;
     }
 
+    &:focus {
+      outline-color: abstracts.$color-brand-primary;
+    }
+
     &:active {
       color: abstracts.$highlight-brand-primary;
     }
@@ -80,15 +85,26 @@
   list-style-type: none;
   display: flex;
   padding: 0;
-  gap: 21px;
+  gap: 8px;
+  align-items: center;
+
+  &__link {
+    display: block;
+    padding: 8px;
+  }
 
   &__icon {
+    display: block;
     border-radius: 50%;
     color: abstracts.$color-text-secondary;
     @include abstracts.transition(color, background-color);
 
     &:hover {
       color: abstracts.$color-brand-primary;
+    }
+
+    &:focus {
+      outline-color: abstracts.$color-brand-primary;
     }
 
     &:active {

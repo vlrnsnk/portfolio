@@ -20,6 +20,10 @@
     border-color: abstracts.$highlight-brand-primary;
   }
 
+  &:focus {
+    outline-color: abstracts.$color-brand-primary;
+  }
+
   &:active {
     background-color: abstracts.$color-brand-primary;
     color: abstracts.$color-background;

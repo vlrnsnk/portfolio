@@ -43,6 +43,10 @@
       color: abstracts.$color-text-primary;
     }
 
+    &:focus {
+      outline-color: abstracts.$color-brand-primary;
+    }
+
     &:active {
       color: abstracts.$color-brand-primary;
       border-color: abstracts.$color-brand-primary;
@@ -117,5 +121,9 @@
   &__url {
     place-self: end;
     height: 39px;
+
+    &:focus {
+      outline-color: abstracts.$color-brand-primary;
+    }
   }
 }

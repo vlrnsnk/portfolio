@@ -45,6 +45,10 @@
   line-height: 1.375;
   padding-left: 8px;
 
+  &:focus {
+    outline-color: abstracts.$color-brand-primary;
+  }
+
   @media screen and (min-width: abstracts.$lg) {
     font-size: 32px;
   }
