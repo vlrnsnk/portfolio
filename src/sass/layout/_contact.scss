@@ -37,6 +37,10 @@
     &__field-group {
       margin-bottom: 16px;
       width: 100%;
+
+      @media screen and (min-width: abstracts.$lg) {
+        margin-bottom: 32px;
+      }
     }
 
     &__label {
