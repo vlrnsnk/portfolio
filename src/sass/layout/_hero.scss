@@ -7,6 +7,10 @@
   padding-bottom: 64px;
   position: relative;
 
+  @media screen and (min-width: abstracts.$lg) {
+    padding-bottom: 96px;
+  }
+
   &__avatar {
     display: block;
     width: 200px;
@@ -83,7 +87,7 @@
     @media screen and (min-width: abstracts.$xxlg) {
       background-size: calc((abstracts.$xxlg - 2 * (96px) - 81px) / 12) calc((abstracts.$xxlg - 2 * (96px) - 61px) / 11);
     }
-  
+
     &::after {
       position: absolute;
       content: "";

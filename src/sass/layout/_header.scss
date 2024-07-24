@@ -7,6 +7,10 @@
   padding-top: 8px;
   padding-bottom: 24px;
 
+  @media screen and (min-width: abstracts.$lg) {
+    padding-bottom: 96px;
+  }
+
   @media screen and (min-width: abstracts.$sm) {
     padding-top: 16px;
   }

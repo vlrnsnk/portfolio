@@ -6,6 +6,10 @@
   align-items: center;
   padding-bottom: 64px;
 
+  @media screen and (min-width: abstracts.$lg) {
+    padding-bottom: 96px;
+  }
+
   &__subtitle {
     margin-bottom: 32px;
   }
@@ -19,9 +23,9 @@
     padding: 0;
     margin-bottom: 32px;
 
-    @media screen and (min-width: 1000px) {
-      margin-bottom: 80px;
-      gap: 55px;
+    @media screen and (min-width: abstracts.$lg) {
+      margin-bottom: 64px;
+      gap: 48px;
     }
   }
 
@@ -70,8 +74,11 @@
   list-style-type: none;
 
   @media screen and (min-width: abstracts.$md) {
-    // max-width: 1144px;
     flex-direction: row;
+  }
+
+  @media screen and (min-width: abstracts.$xxlg) {
+    padding-bottom: 64px;
   }
 
   @media screen and (min-width: abstracts.$xxlg) {
@@ -81,10 +88,6 @@
   &__item {
     display: flex;
     flex-direction: column;
-
-    @media screen and (min-width: abstracts.$lg) {
-      // width: 356px;
-    }
   }
 
   &__image {
@@ -98,11 +101,6 @@
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 32px;
-
-    @media screen and (min-width: abstracts.$lg) {
-      // grid-template-columns: 288px auto;
-      // grid-template-rows: 30px 37px;
-    }
   }
 
   &__name {

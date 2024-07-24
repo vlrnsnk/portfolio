@@ -6,6 +6,10 @@
   align-items: center;
   padding-bottom: 64px;
 
+  @media screen and (min-width: abstracts.$lg) {
+    padding-bottom: 96px;
+  }
+
   &__subtitle {
     margin-bottom: 32px;
   }
