@@ -11,14 +11,28 @@
   }
 
   &-form {
+    // display: flex;
+    flex-direction: column;
     width: 100%;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: abstracts.$lg) {
       width: 696px;
+    }
+
+    &__name-email-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: abstracts.$md) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 32px;
+      }
     }
 
     &__field-group {
       margin-bottom: 16px;
+      width: 100%;
     }
 
     &__label {

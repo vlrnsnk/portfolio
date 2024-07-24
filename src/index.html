@@ -213,14 +213,16 @@
         <h2 class="title">Get In Touch</h2>
         <p class="contact__subtitle subtitle">Let's Collaborate</p>
         <form class="contact-form" action="#" method="post">
-          <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-name">Name <span class="contact-form__required-symbol">*</span></label>
-            <input class="contact-form__input" id="contact-form-name" name="name" type="text" placeholder="Your name" required>
-          </p>
-          <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-email">Email <span class="contact-form__required-symbol">*</span></label>
-            <input class="contact-form__input" id="contact-form-email" name="email" type="text" placeholder="example@email.com" required>
-          </p>
+          <div class="contact-form__name-email-wrapper">
+            <p class="contact-form__field-group">
+              <label class="contact-form__label" for="contact-form-name">Name <span class="contact-form__required-symbol">*</span></label>
+              <input class="contact-form__input" id="contact-form-name" name="name" type="text" placeholder="Your name" required>
+            </p>
+            <p class="contact-form__field-group">
+              <label class="contact-form__label" for="contact-form-email">Email <span class="contact-form__required-symbol">*</span></label>
+              <input class="contact-form__input" id="contact-form-email" name="email" type="text" placeholder="example@email.com" required>
+            </p>
+          </div>
           <p class="contact-form__field-group">
             <label class="contact-form__label" for="contact-form-subject">Subject <span class="contact-form__required-symbol">*</span></label>
             <input class="contact-form__input" id="contact-form-subject" name="subject" type="text" placeholder="Subject of your email" required>
