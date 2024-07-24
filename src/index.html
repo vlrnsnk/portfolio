@@ -214,24 +214,19 @@
         <p class="contact__subtitle subtitle">Let's Collaborate</p>
         <form class="contact-form" action="#" method="post">
           <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-name">Name</label>
-            <input class="contact-form__input" id="contact-form-name" name="name" type="text" placeholder="Full name" required>
+            <label class="contact-form__label" for="contact-form-name">Name <span class="contact-form__required-symbol">*</span></label>
+            <input class="contact-form__input" id="contact-form-name" name="name" type="text" placeholder="Your name" required>
           </p>
           <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-email">Email</label>
+            <label class="contact-form__label" for="contact-form-email">Email <span class="contact-form__required-symbol">*</span></label>
             <input class="contact-form__input" id="contact-form-email" name="email" type="text" placeholder="example@email.com" required>
           </p>
           <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-services">Service</label>
-            <select class="contact-form__select" id="contact-form-services" name="services" required>
-              <option value="">Please, select a service</option>
-              <option value="front-end">Front-End Development</option>
-              <option value="back-end">Back-End Development</option>
-              <option value="database">Database Development</option>
-            </select>
+            <label class="contact-form__label" for="contact-form-subject">Subject <span class="contact-form__required-symbol">*</span></label>
+            <input class="contact-form__input" id="contact-form-subject" name="subject" type="text" placeholder="Subject of your email" required>
           </p>
           <p class="contact-form__field-group">
-            <label class="contact-form__label" for="contact-form-message">Message</label>
+            <label class="contact-form__label" for="contact-form-message">Message <span class="contact-form__required-symbol">*</span></label>
             <textarea class="contact-form__textarea" id="contact-form-message" name="message" placeholder="Write your message here" required></textarea>
           </p>
           <button class="button contact-form__button" type="submit">Get In Touch</button>

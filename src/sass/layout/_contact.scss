@@ -66,5 +66,9 @@
         color: abstracts.$color-background;
       }
     }
+
+    &__required-symbol {
+      color: abstracts.$color-brand-primary;
+    }
   }
 }
