@@ -124,9 +124,31 @@
   &__url {
     place-self: end;
     height: 39px;
+    color: abstracts.$color-text-primary;
+    @include abstracts.transition(color);
+
+    &:hover {
+      color: abstracts.$color-brand-primary;
+    }
+
+    &:hover path {
+      color: abstracts.$color-text-primary;
+    }
 
     &:focus {
       outline-color: abstracts.$color-brand-primary;
     }
+
+    &:active {
+      color: abstracts.$highlight-brand-primary;
+    }
+
+    &:active path {
+      color: abstracts.$color-background;
+    }
+  }
+
+  &__icon-svg-path {
+    color: abstracts.$highlight-brand-primary;
   }
 }
