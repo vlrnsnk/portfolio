@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 *::before,
 *::after {
@@ -10,4 +12,21 @@
 
 html {
   height: 100%;
+  font-size: 16px;
+
+  @media screen and (min-width: abstracts.$md) {
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: abstracts.$xlg) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: abstracts.$xlg) {
+    font-size: 19px;
+  }
+
+  @media screen and (min-width: abstracts.$xxlg) {
+    font-size: 20px;
+  }
 }
