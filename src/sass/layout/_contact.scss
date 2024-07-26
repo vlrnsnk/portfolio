@@ -66,11 +66,6 @@
       border: 1px solid abstracts.$color-heading;
       width: 100%;
 
-      @media screen and (min-width: abstracts.$lg) {
-        font-size: 1.25rem;
-        padding: 20px 29px;
-      }
-
       &:focus {
         outline-color: abstracts.$color-brand-primary;
       }
