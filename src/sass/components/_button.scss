@@ -3,13 +3,13 @@
 .button {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1.2;
   min-height: 48px;
   text-decoration: none;
   color: abstracts.$color-text-primary;
   background-color: abstracts.$color-background;
-  padding: 14px 19px;
+  padding: 13px 19px;
   border-radius: 75px;
   border: 1px solid abstracts.$color-brand-primary;
   cursor: pointer;

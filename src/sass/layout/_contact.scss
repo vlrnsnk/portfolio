@@ -46,7 +46,7 @@
     &__label {
       font-family: "Poppins", "Verdana", sans-serif;
       font-weight: 700;
-      font-size: 16x;
+      font-size: 1rem;
       line-height: 1.5;
       color: abstracts.$color-heading;
       display: block;
@@ -57,7 +57,7 @@
     &__textarea {
       font-family: "Inter", "Tahoma", sans-serif;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.5;
       color: abstracts.$color-text-form-input;
       background-color: abstracts.$color-background;
@@ -67,7 +67,7 @@
       width: 100%;
 
       @media screen and (min-width: abstracts.$lg) {
-        font-size: 20px;
+        font-size: 1.25rem;
         padding: 20px 29px;
       }
 

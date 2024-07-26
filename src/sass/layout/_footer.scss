@@ -9,7 +9,7 @@
 
   &__top,
   &__bottom {
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: abstracts.$lg) {
       padding: 0 40px;
     }
   }
@@ -30,13 +30,9 @@
   &__text {
     font-family: "Poppins", "Verdana", sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1;
     color: abstracts.$color-heading;
-
-    @media screen and (min-width: abstracts.$md) {
-      // font-size: 63px;
-    }
   }
 
   &__divider {
@@ -65,7 +61,7 @@
     font-weight: 500;
     font-style: normal;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     color: abstracts.$color-text-secondary;
     @include abstracts.transition(color);
@@ -121,7 +117,7 @@
 .copyright {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   color: abstracts.$color-text-secondary;
 }

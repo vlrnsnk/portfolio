@@ -3,11 +3,7 @@
 .title {
   font-family: "Poppins", "Verdana", sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 1.5;
   color: abstracts.$color-heading;
-
-  @media screen and (min-width: 1000px) {
-    font-size: 48px;
-  }
 }

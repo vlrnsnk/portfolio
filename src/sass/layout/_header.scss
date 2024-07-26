@@ -45,16 +45,12 @@
   font-family: "Oleo Script", "Brush Script MT", fantasy;
   color: abstracts.$color-text-primary;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.375;
   padding: 7px 0px 8px 8px;
 
   &:focus {
     outline-color: abstracts.$color-brand-primary;
-  }
-
-  @media screen and (min-width: abstracts.$lg) {
-    font-size: 32px;
   }
 }
 
