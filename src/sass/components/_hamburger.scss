@@ -7,32 +7,11 @@
   border-radius: 1px;
   width: 32px;
   height: 2px;
-  @include abstracts.transition(background-color);
+  @include abstracts.transition(background-color, translate, transform);
   padding: 0;
 
   @media screen and (min-width: abstracts.$lg) {
     display: none;
-  }
-
-  &-wrapper {
-    cursor: pointer;
-    padding: 23px 8px;
-    display: flex;
-    align-items: center;
-    align-self: center;
-  }
-
-  &--active {
-    position: fixed;
-    z-index: 1;
-    top: 8px;
-    right: 16px;
-    // color: abstracts.$color-text-primary;
-
-    // @media screen and (min-width: abstracts.$sm) {
-    //   top: 39px;
-    //   right: 50px;
-    // }
   }
 
   &::before,
@@ -68,5 +47,41 @@
   &:active::before,
   &:active::after {
     background-color: abstracts.$highlight-brand-primary;
+  }
+
+  &-wrapper {
+    cursor: pointer;
+    padding: 23px 8px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+  }
+
+  &--active {
+    position: fixed;
+    z-index: 1;
+    top: 8px;
+    right: 16px;
+  }
+
+  &--cross {
+    transform: rotate(405deg);
+
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 1px;
+      width: 16px;
+      height: 2px;
+      display: block;
+    }
+
+    &::before {
+      transform: translate(8px, -8px) rotate(450deg);
+    }
+
+    &::after {
+      transform: translate(8px, 6px) rotate(450deg);
+    }
   }
 }
