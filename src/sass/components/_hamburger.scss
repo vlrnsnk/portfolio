@@ -22,6 +22,19 @@
     align-self: center;
   }
 
+  &--active {
+    position: fixed;
+    z-index: 1;
+    top: 8px;
+    right: 16px;
+    // color: abstracts.$color-text-primary;
+
+    // @media screen and (min-width: abstracts.$sm) {
+    //   top: 39px;
+    //   right: 50px;
+    // }
+  }
+
   &::before,
   &::after {
     content: "";

@@ -5,13 +5,15 @@
   top: 0;
   right: 0;
   width: 0;
+  height: 0;
   overflow-x: hidden;
-  @include abstracts.transition(width);
+  // @include abstracts.transition(width);
+  transition: height .2s ease-in-out;
+  // transition: all .2s ease-in-out;
+  // transition: height .2s ease-in-out, width .2s ease-in-out;
 
   &--active {
     position: fixed;
-    top: 0;
-    right: 0;
     height: 100%;
     width: 100%;
     z-index: 1;
