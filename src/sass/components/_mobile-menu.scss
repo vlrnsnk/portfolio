@@ -4,21 +4,18 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: 100%;
   height: 0;
+  opacity: 0;
   overflow-x: hidden;
-  // @include abstracts.transition(width);
-  transition: height .2s ease-in-out;
-  // transition: all .2s ease-in-out;
-  // transition: height .2s ease-in-out, width .2s ease-in-out;
+  @include abstracts.transition(height, opacity);
 
   &--active {
     position: fixed;
     height: 100%;
-    width: 100%;
     z-index: 1;
     background-color: abstracts.$color-background;
     color: abstracts.$color-text-primary;
-    opacity: .9;
+    opacity: .95;
   }
 }
