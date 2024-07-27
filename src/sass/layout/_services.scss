@@ -18,6 +18,8 @@
 .service {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   font-family: "Inter", "Tahoma", sans-serif;
   list-style-type: none;
