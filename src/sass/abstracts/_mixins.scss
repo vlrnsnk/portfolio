@@ -1,4 +1,4 @@
-// Helper to keep all transitions in one place
+/* Helper to keep all transitions in one place */
 @mixin transition($properties...) {
   $transition: ();
 
