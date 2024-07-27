@@ -15,12 +15,19 @@
   }
 
   &-form {
-    // display: flex;
     flex-direction: column;
     width: 100%;
 
     @media screen and (min-width: abstracts.$lg) {
-      width: 696px;
+      max-width: 704px;
+    }
+
+    @media screen and (min-width: abstracts.$xlg) {
+      max-width: 756px;
+    }
+
+    @media screen and (min-width: abstracts.$xxlg) {
+      max-width: 936px;
     }
 
     &__name-email-wrapper {

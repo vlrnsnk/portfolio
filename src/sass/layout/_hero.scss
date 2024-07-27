@@ -46,7 +46,15 @@
     padding-bottom: 32px;
 
     @media screen and (min-width: abstracts.$lg) {
-      // max-width: 793px;
+      max-width: 704px;
+    }
+
+    @media screen and (min-width: abstracts.$xlg) {
+      max-width: 756px;
+    }
+
+    @media screen and (min-width: abstracts.$xxlg) {
+      max-width: 936px;
     }
   }
 

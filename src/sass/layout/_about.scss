@@ -15,8 +15,16 @@
   }
 
   &__description {
-    max-width: 840px;
+    max-width: 704px;
     padding-bottom: 24px;
+
+    @media screen and (min-width: abstracts.$xlg) {
+      max-width: 756px;
+    }
+
+    @media screen and (min-width: abstracts.$xxlg) {
+      max-width: 936px;
+    }
 
     &--last {
       padding-bottom: 32px;
