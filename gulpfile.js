@@ -48,6 +48,7 @@ gulp.task('html', () => {
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
+  gulp.watch('src/js/*', gulp.series('copy'));
 });
 
 gulp.task('clean', () => {
@@ -61,6 +62,7 @@ gulp.task('copy', () => {
     'src/fonts/**/*',
     'src/img/favicons/*',
     'src/img/*',
+    'src/js/*',
   ], {
     encoding: false,
     base: 'src',

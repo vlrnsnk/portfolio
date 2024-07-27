@@ -1,0 +1,22 @@
+@use "../abstracts";
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  overflow-x: hidden;
+  @include abstracts.transition(width);
+
+  &--active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: abstracts.$color-background;
+    color: abstracts.$color-text-primary;
+    opacity: .9;
+  }
+}
