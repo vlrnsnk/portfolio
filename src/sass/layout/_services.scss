@@ -62,6 +62,10 @@
     line-height: 1.5;
     color: abstracts.$color-heading;
     margin-bottom: 18px;
+
+    @media screen and (min-width: abstracts.$xlg) {
+      font-size: 1.18rem;
+    }
   }
 
   &__description {
@@ -70,5 +74,9 @@
     line-height: 1.5;
     text-align: justify;
     color: abstracts.$color-text-primary;
+
+    @media screen and (min-width: abstracts.$xlg) {
+      font-size: 0.95rem;
+    }
   }
 }
