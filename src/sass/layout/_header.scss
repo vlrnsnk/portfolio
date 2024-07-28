@@ -82,9 +82,11 @@
   }
 
   &__item {
-    &:first-child,
-    &:last-child {
-      margin-left: auto;
+    @media screen and (min-width: abstracts.$lg) {
+      &:first-child,
+      &:last-child {
+        margin-left: auto;
+      }
     }
   }
 
