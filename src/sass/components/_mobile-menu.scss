@@ -10,6 +10,15 @@
   overflow-x: hidden;
   @include abstracts.transition(height, opacity);
 
+  @media screen and (min-width: abstracts.$lg) {
+    position: static;
+    // display: block;
+    // flex-direction: row;
+    // width: auto;
+    height: auto;
+    opacity: 1;
+  }
+
   &--active {
     position: fixed;
     height: 100%;
