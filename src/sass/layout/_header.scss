@@ -56,7 +56,8 @@
 .site-navigation {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
+  justify-content: center;
   gap: 32px;
   align-items: center;
   list-style-type: none;
@@ -71,9 +72,7 @@
   @media screen and (min-width: abstracts.$lg) {
     flex-direction: row;
     flex-wrap: wrap;
-    // justify-content: center;
     gap: 8px;
-    // margin: 0 auto;
     padding: 32px 0;
     font-size: 1rem;
   }
@@ -83,9 +82,9 @@
   }
 
   &__item {
-    &--last {
-      // flex-grow: 1;
-      // margin-left: auto;
+    &:first-child,
+    &:last-child {
+      margin-left: auto;
     }
   }
 
