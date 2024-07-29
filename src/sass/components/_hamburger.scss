@@ -9,6 +9,8 @@
   height: 2px;
   @include abstracts.transition(background-color, translate, transform);
   padding: 0;
+  opacity: 0;
+  transition: opacity .5s ease-out;
 
   @media screen and (min-width: abstracts.$lg) {
     display: none;
