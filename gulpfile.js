@@ -48,28 +48,28 @@ gulp.task('html', () => {
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*', gulp.series('copy'));
+  gulp.watch('src/js/*.js', gulp.series('copy'));
 });
 
 gulp.task('clean', () => {
   return deleteSync('build')
 });
 
-// gulp.task('copy', (done) => {
-gulp.task('copy', () => {
+gulp.task('copy', (done) => {
+// gulp.task('copy', () => {
   gulp.src([
     'src/*.ico',
     'src/fonts/**/*',
     'src/img/favicons/*',
     'src/img/*',
-    'src/js/*',
+    'src/js/*.js',
   ], {
     encoding: false,
     base: 'src',
   })
     .pipe(gulp.dest('build'));
 
-  // done();
+  done();
 });
 
 gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'html', 'server', 'watch'));
