@@ -13,6 +13,7 @@ import cssnano from 'cssnano';
 import sourcemap from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
+import terser from 'gulp-terser';
 
 gulp.task('server', () => {
   browserSync({
@@ -39,6 +40,14 @@ gulp.task('styles', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('scripts', () => {
+  return gulp.src("src/js/index.js")
+    .pipe(terser())
+    .pipe(rename("index.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('html', () => {
   return gulp.src('src/*.html')
     .pipe(minify({ collapseWhitespace: true }))
@@ -48,7 +57,7 @@ gulp.task('html', () => {
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*.js', gulp.series('copy'));
+  gulp.watch('src/js/*.js', gulp.series('scripts'));
 });
 
 gulp.task('clean', () => {
@@ -56,13 +65,11 @@ gulp.task('clean', () => {
 });
 
 gulp.task('copy', (done) => {
-// gulp.task('copy', () => {
   gulp.src([
     'src/*.ico',
     'src/fonts/**/*',
     'src/img/favicons/*',
     'src/img/*',
-    'src/js/*.js',
   ], {
     encoding: false,
     base: 'src',
@@ -72,4 +79,4 @@ gulp.task('copy', (done) => {
   done();
 });
 
-gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'html', 'server', 'watch'));
+gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'scripts', 'html', 'server', 'watch'));
