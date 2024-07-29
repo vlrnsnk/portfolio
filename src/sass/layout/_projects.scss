@@ -40,7 +40,7 @@
     border-radius: 50px;
     border: 1px solid abstracts.$highlight-button-primary;
     cursor: pointer;
-    @include abstracts.transition(background-color, color, border-color);
+    @include abstracts.transition(.2s, background-color, color, border-color);
 
     &:hover {
       background-color: abstracts.$highlight-button-primary;
@@ -126,7 +126,7 @@
     justify-content: end;
     padding: 4px 0 4px 10px;
     color: abstracts.$color-text-primary;
-    @include abstracts.transition(color);
+    @include abstracts.transition(.2s, color);
 
     &:hover {
       color: abstracts.$color-brand-primary;

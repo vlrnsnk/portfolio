@@ -1,10 +1,10 @@
 /* Helper to keep all transitions in one place */
-@mixin transition($properties...) {
+@mixin transition($time, $properties...) {
   $transition: ();
 
   @each $property in $properties {
     $transition: append(
-        $transition, ($property 0.2s ease-out), $separator: comma
+        $transition, ($property $time ease-out), $separator: comma
     );
   }
 
