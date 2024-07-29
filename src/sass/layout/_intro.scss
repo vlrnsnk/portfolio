@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  // gap: 32px;
   width: calc(100% - 2 * 16px);
   height: calc(100vh - 80px);
   cursor: pointer;
@@ -49,6 +48,7 @@
 
   &__icon {
     color: abstracts.$color-text-secondary;
+    animation: float 3s ease-in-out infinite;
   }
 
   &--hidden {
