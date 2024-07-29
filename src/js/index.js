@@ -13,6 +13,8 @@ const hamburgerClickHandler = () => {
 };
 
 const introClickHandler = () => {
+  // Hide intro screen and show main page content
+
   intro.style.opacity = 0;
   intro.style.height = 0;
   hero.style.opacity = 1;
@@ -21,12 +23,17 @@ const introClickHandler = () => {
   body.style.height = 'auto';
   body.style.overflow = 'auto';
 
+  // Timeout for proper animation
+
   setTimeout(() => {
     intro.classList.add('intro--hidden');
   }, 1000);
 }
 
 hamburger.addEventListener('click', hamburgerClickHandler);
+
+// Deactivate intro on different click/touch/mouse events
+
 intro.addEventListener('click', introClickHandler);
 intro.addEventListener('mousemove', introClickHandler);
 intro.addEventListener('touchmove', introClickHandler);
