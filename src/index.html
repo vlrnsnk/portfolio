@@ -122,23 +122,51 @@
         <p class="projects__subtitle subtitle">Some of My Work</p>
         <ul class="projects__tabs-list">
           <li class="projects__tabs-item">
-            <button class="projects__tabs-button projects__tabs-button--active" type="button">React</button>
+            <button class="projects__tabs-button projects__tabs-button--active" type="button" data-type="react">React</button>
           </li>
           <li class="projects__tabs-item">
-            <button class="projects__tabs-button" type="button">Data Visualization</button>
+            <button class="projects__tabs-button" type="button" data-type="data-visualization">Data Visualization</button>
           </li>
           <li class="projects__tabs-item">
-            <button class="projects__tabs-button" type="button">Vanilla JS</button>
+            <button class="projects__tabs-button" type="button" data-type="vanilla-js">Vanilla JS</button>
           </li>
           <li class="projects__tabs-item">
-            <button class="projects__tabs-button" type="button">Full Stack</button>
+            <button class="projects__tabs-button" type="button" data-type="full-stack">Full Stack</button>
           </li>
         </ul>
         <ul class="project">
-          <li class="project__item">
+          <li class="project__item" data-type="react">
             <img class="project__image" src="https://placehold.co/288x198.png" alt="project image"  width="288" height="198">
             <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
+              <p class="project__name">React Project #1</p>
+              <p class="project__tech-used">React</p>
+              <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
+                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
+                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li class="project__item" data-type="react">
+            <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
+            <div class="project__wrapper">
+              <p class="project__name">React Project #2</p>
+              <p class="project__tech-used">React, Bootstrap, Django</p>
+              <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
+                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
+                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </li>
+          <li class="project__item" data-type="data-visualization">
+            <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
+            <div class="project__wrapper">
+              <p class="project__name">D3 project #1</p>
               <p class="project__tech-used">Technology used</p>
               <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,10 +177,10 @@
               </a>
             </div>
           </li>
-          <li class="project__item">
+          <li class="project__item" data-type="vanilla-js">
             <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
             <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
+              <p class="project__name">Vanilla JS #1 / description</p>
               <p class="project__tech-used">Technology used</p>
               <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,10 +191,10 @@
               </a>
             </div>
           </li>
-          <li class="project__item">
+          <li class="project__item" data-type="full-stack">
             <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
             <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
+              <p class="project__name">Full Stack #1 / description</p>
               <p class="project__tech-used">Technology used</p>
               <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,38 +205,10 @@
               </a>
             </div>
           </li>
-          <li class="project__item">
+          <li class="project__item" data-type="full-stack">
             <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
             <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
-              <p class="project__tech-used">Technology used</p>
-              <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
-                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
-                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="project__item">
-            <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
-            <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
-              <p class="project__tech-used">Technology used</p>
-              <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
-                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
-                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="project__item">
-            <img class="project__image" src="https://placehold.co/288x198.png" alt="project image" width="288" height="198">
-            <div class="project__wrapper">
-              <p class="project__name">Project name / description</p>
+              <p class="project__name">Full Stack #2 / description</p>
               <p class="project__tech-used">Technology used</p>
               <a href="#" class="project__url" target="_blank" rel="nofollow noopener">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
