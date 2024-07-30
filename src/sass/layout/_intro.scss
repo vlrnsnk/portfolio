@@ -8,7 +8,7 @@
   align-items: center;
   width: calc(100% - 2 * 16px);
   height: calc(100vh - 80px);
-  cursor: pointer;
+  // cursor: pointer;
   background-color: abstracts.$color-background;
   z-index: 1;
   @include abstracts.transition(1s, opacity, height);

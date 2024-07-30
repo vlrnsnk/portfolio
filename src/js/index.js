@@ -44,16 +44,22 @@ const hamburgerClickHandler = () => {
   hamburgerWrapper.classList.toggle('hamburger-wrapper--active');
 };
 
-const introClickHandler = () => {
+const removeIntroScreen = () => {
+
   // Hide intro screen and show main page content
 
   intro.style.opacity = 0;
   intro.style.height = 0;
   hero.style.opacity = 1;
   about.style.opacity = 1;
-  hamburger.style.opacity = 1;
   body.style.height = 'auto';
   body.style.overflow = 'auto';
+
+  // Remove event listeners for removing intro screen
+
+  window.removeEventListener('click', removeIntroScreen);
+  window.removeEventListener('mousemove', removeIntroScreen);
+  window.removeEventListener('touchmove', removeIntroScreen);
 
   // Timeout for proper animation
 
@@ -62,17 +68,21 @@ const introClickHandler = () => {
   }, 1000);
 }
 
+// Scroll to top if page reload further than the first screen
+
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
+
+// Add hamburger click handler
 
 hamburger.addEventListener('click', hamburgerClickHandler);
 
 // Deactivate intro on different click/touch/mouse events
 
-intro.addEventListener('click', introClickHandler);
-intro.addEventListener('mousemove', introClickHandler);
-intro.addEventListener('touchmove', introClickHandler);
+window.addEventListener('click', removeIntroScreen);
+window.addEventListener('mousemove', removeIntroScreen);
+window.addEventListener('touchmove', removeIntroScreen);
 
 // Handle tabs switching
 
