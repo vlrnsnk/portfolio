@@ -88,6 +88,7 @@
   &__item {
     display: flex;
     flex-direction: column;
+    max-width: 288px;
   }
 
   &__image {
