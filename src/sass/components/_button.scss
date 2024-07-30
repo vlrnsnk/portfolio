@@ -14,6 +14,7 @@
   border: 1px solid abstracts.$color-brand-primary;
   cursor: pointer;
   @include abstracts.transition(.2s, color, border-color);
+  text-align: center;
 
   @media screen and (min-width: abstracts.$sm) {
     padding-right: 19px;
