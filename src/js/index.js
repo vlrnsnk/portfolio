@@ -8,6 +8,7 @@ const body = document.querySelector('body');
 const tabsList = document.querySelector('.projects__tabs-list');
 const tabsButtons = document.querySelectorAll('.projects__tabs-button');
 const projects = document.querySelectorAll('.project__item');
+const viewAllProjects = document.querySelector('#view-all-projects');
 
 // Hide all projects except for default 'react' type
 
@@ -19,11 +20,14 @@ projects.forEach((project) => {
 
 // Show projects by type of clicked tab
 
-const showProjectsByType = (type = 'all') => {
+const showProjectsByType = (type) => {
   if (type === 'all') {
+    console.log(type);
     projects.forEach((project) => {
       project.style.display = 'block';
     });
+
+    return;
   }
 
   projects.forEach((project) => {
@@ -80,4 +84,12 @@ tabsList.addEventListener('click', (event) => {
 
   event.target.classList.add('projects__tabs-button--active');
   showProjectsByType(event.target.dataset.type);
+});
+
+viewAllProjects.addEventListener('click', () => {
+  tabsButtons.forEach((tabsButton) => {
+    tabsButton.classList.remove('projects__tabs-button--active');
+  });
+
+  showProjectsByType('all');
 });
