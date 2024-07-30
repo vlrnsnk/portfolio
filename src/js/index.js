@@ -5,8 +5,8 @@ const intro = document.querySelector('.intro');
 const hero = document.querySelector('.hero');
 const about = document.querySelector('.about');
 const body = document.querySelector('body');
-const tabsList = document.querySelector('.projects__tabs-list');
-const tabsButtons = document.querySelectorAll('.projects__tabs-button');
+const tabsList = document.querySelector('.projects__tab-list');
+const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 
@@ -22,7 +22,6 @@ projects.forEach((project) => {
 
 const showProjectsByType = (type) => {
   if (type === 'all') {
-    console.log(type);
     projects.forEach((project) => {
       project.style.display = 'block';
     });
@@ -78,17 +77,19 @@ intro.addEventListener('touchmove', introClickHandler);
 // Handle tabs switching
 
 tabsList.addEventListener('click', (event) => {
-  tabsButtons.forEach((tabsButton) => {
-    tabsButton.classList.remove('projects__tabs-button--active');
+  tabButtons.forEach((tabButton) => {
+    tabButton.classList.remove('projects__tab-button--active');
   });
 
-  event.target.classList.add('projects__tabs-button--active');
+  event.target.classList.add('projects__tab-button--active');
   showProjectsByType(event.target.dataset.type);
 });
 
+// Handle click on 'View All' button
+
 viewAllProjects.addEventListener('click', () => {
-  tabsButtons.forEach((tabsButton) => {
-    tabsButton.classList.remove('projects__tabs-button--active');
+  tabButtons.forEach((tabButton) => {
+    tabButton.classList.remove('projects__tab-button--active');
   });
 
   showProjectsByType('all');
