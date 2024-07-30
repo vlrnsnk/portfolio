@@ -30,6 +30,10 @@ const introClickHandler = () => {
   }, 1000);
 }
 
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
 hamburger.addEventListener('click', hamburgerClickHandler);
 
 // Deactivate intro on different click/touch/mouse events
