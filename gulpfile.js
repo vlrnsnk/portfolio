@@ -14,6 +14,7 @@ import sourcemap from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
+import ghPages from 'gulp-gh-pages';
 
 // Run BrowserSync server
 
@@ -89,6 +90,15 @@ gulp.task('copy', (done) => {
     base: 'src',
   })
     .pipe(gulp.dest('build'));
+
+  done();
+});
+
+// Deploy build directory to GitHub Pages
+
+gulp.task('deploy', (done) => {
+  gulp.src('build/**/*')
+    .pipe(ghPages());
 
   done();
 });
