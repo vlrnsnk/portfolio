@@ -49,6 +49,7 @@ const showProjectsByType = (type) => {
 
 const hamburgerClickHandler = () => {
   mobileMenu.classList.toggle('main-navigation__wrapper--active');
+  // mobileMenu.classList.toggle('container');
   hamburger.classList.toggle('hamburger--cross');
   hamburgerWrapper.classList.toggle('hamburger-wrapper--active');
 };

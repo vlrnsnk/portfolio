@@ -63,6 +63,17 @@
       z-index: 1;
       top: 8px;
       right: 16px;
+
+      @media screen and (min-width: abstracts.$sm) {
+        top: 16px;
+        right: 0;
+        position: absolute;
+      }
+
+      @media screen and (min-width: abstracts.$md) {
+        top: 24px;
+        position: absolute;
+      }
     }
   }
 

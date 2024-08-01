@@ -1,6 +1,7 @@
 @use "../abstracts";
 
 .main-navigation {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,6 +95,11 @@
   font-size: 2.25rem;
   line-height: 1.375;
   height: 100%;
+
+  @media screen and (min-width: abstracts.$sm) {
+    width: abstracts.$sm;
+    margin: 0 auto;
+  }
 
   @media screen and (min-width: abstracts.$lg) {
     flex-flow: row wrap;
