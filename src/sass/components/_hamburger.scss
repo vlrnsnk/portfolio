@@ -7,8 +7,9 @@
   border-radius: 1px;
   width: 32px;
   height: 2px;
-  @include abstracts.transition(.2s, background-color, translate, transform);
   padding: 0;
+
+  @include abstracts.transition(0.2s, background-color, translate, transform);
 
   @media screen and (min-width: abstracts.$lg) {
     display: none;
@@ -22,7 +23,8 @@
     width: 16px;
     height: 2px;
     display: block;
-    @include abstracts.transition(.2s, background-color);
+
+    @include abstracts.transition(0.2s, background-color);
   }
 
   &::before {

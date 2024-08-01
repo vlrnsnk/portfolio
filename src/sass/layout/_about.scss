@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
+
   @include abstracts.transition(1s, opacity);
 
   @media screen and (min-width: abstracts.$lg) {

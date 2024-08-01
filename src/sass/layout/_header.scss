@@ -39,7 +39,8 @@
     height: 0;
     opacity: 0;
     overflow-x: hidden;
-    @include abstracts.transition(.2s, height, opacity);
+
+    @include abstracts.transition(0.2s, height, opacity);
 
     @media screen and (min-width: abstracts.$lg) {
       position: static;
@@ -53,7 +54,7 @@
       z-index: 1;
       background-color: abstracts.$color-background;
       color: abstracts.$color-text-primary;
-      opacity: .95;
+      opacity: 0.95;
     }
   }
 
@@ -95,8 +96,7 @@
   height: 100%;
 
   @media screen and (min-width: abstracts.$lg) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 8px;
     padding: 32px 0;
     font-size: 1rem;
@@ -127,7 +127,8 @@
 
     &:hover {
       color: abstracts.$color-brand-primary;
-      @include abstracts.transition(.2s, color);
+
+      @include abstracts.transition(0.2s, color);
     }
 
     &:active {
@@ -150,7 +151,8 @@
     cursor: pointer;
 
     color: abstracts.$color-text-primary;
-    @include abstracts.transition(.2s, color);
+
+    @include abstracts.transition(0.2s, color);
 
     &:hover {
       color: abstracts.$color-brand-primary;

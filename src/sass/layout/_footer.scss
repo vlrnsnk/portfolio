@@ -64,7 +64,8 @@
     font-size: 1rem;
     line-height: 1.5;
     color: abstracts.$color-text-secondary;
-    @include abstracts.transition(.2s, color);
+
+    @include abstracts.transition(0.2s, color);
 
     &:hover {
       color: abstracts.$color-brand-primary;
@@ -97,7 +98,8 @@
     display: block;
     border-radius: 50%;
     color: abstracts.$color-text-secondary;
-    @include abstracts.transition(.2s, color, background-color);
+
+    @include abstracts.transition(0.2s, color, background-color);
 
     &:hover {
       color: abstracts.$color-brand-primary;

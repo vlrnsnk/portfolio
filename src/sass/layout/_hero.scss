@@ -6,6 +6,7 @@
   align-items: center;
   padding-bottom: 64px;
   position: relative;
+
   @include abstracts.transition(1s, opacity);
 
   @media screen and (min-width: abstracts.$lg) {

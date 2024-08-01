@@ -10,8 +10,9 @@
   height: calc(100vh - 80px);
   background-color: abstracts.$color-background;
   z-index: 1;
-  @include abstracts.transition(1s, opacity, height);
   opacity: 1;
+
+  @include abstracts.transition(1s, opacity, height);
 
   @media screen and (min-width: abstracts.$sm) {
     height: calc(100vh - 88px);

@@ -40,7 +40,8 @@
     border-radius: 50px;
     border: 1px solid abstracts.$highlight-button-primary;
     cursor: pointer;
-    @include abstracts.transition(.2s, background-color, color, border-color);
+
+    @include abstracts.transition(0.2s, background-color, color, border-color);
 
     &:hover {
       background-color: abstracts.$highlight-button-primary;
@@ -65,9 +66,8 @@
 
 .project {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 32px;
-  flex-wrap: wrap;
   justify-content: center;
   padding-left: 0;
   padding-bottom: 32px;
@@ -127,7 +127,8 @@
     justify-content: end;
     padding: 4px 0 4px 10px;
     color: abstracts.$color-text-primary;
-    @include abstracts.transition(.2s, color);
+
+    @include abstracts.transition(0.2s, color);
 
     &:hover {
       color: abstracts.$color-brand-primary;

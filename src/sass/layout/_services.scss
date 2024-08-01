@@ -17,8 +17,7 @@
 
 .service {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: center;
   gap: 16px;
   font-family: "Inter", "Tahoma", sans-serif;

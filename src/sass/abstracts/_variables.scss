@@ -1,6 +1,7 @@
-@use 'sass:color';
+@use "sass:color";
 
 /* Base colors */
+
 $color-background: #1a1a1a;
 $color-heading: #f5f8ff;
 $color-service-item-background: #2b2b2b;
@@ -14,12 +15,14 @@ $color-text-tertiary: #c1c1c1;
 $color-text-form-input: #8987a1;
 
 /* Hover state */
+
 $highlight-brand-primary: color.scale($color-brand-primary, $lightness: -30%);
 $highlight-button-primary: #484e53;
 
 /* Active state */
 
 /* Breakpoints */
+
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -27,4 +30,5 @@ $xlg: 1200px;
 $xxlg: 1400px;
 
 /* Font sizes */
+
 $px16: 1rem;
