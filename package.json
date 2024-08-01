@@ -29,7 +29,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/sass/**/*.scss\""
+    "stylelint": "stylelint \"src/sass/**/*.scss\"",
+    "lint": "npm run editorconfig && npm run stylelint"
   },
   "repository": {
     "type": "git",
@@ -48,5 +49,13 @@
     "> 0.2%",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.scss"
   ]
 }
