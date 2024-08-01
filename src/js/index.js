@@ -10,6 +10,15 @@ const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 
+// Settings for DOM elements if JS is enabled
+
+body.style.height = '100%';
+body.style.overflow = 'hidden';
+intro.style.display = 'flex';
+hero.style.opacity = '0';
+about.style.opacity = '0';
+hamburgerWrapper.style.display = 'flex';
+
 // Hide all projects except for default 'react' type
 
 projects.forEach((project) => {
