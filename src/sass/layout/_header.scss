@@ -103,6 +103,7 @@
 
   @media screen and (min-width: abstracts.$lg) {
     flex-flow: row wrap;
+    width: auto;
     gap: 8px;
     padding: 32px 0;
     font-size: 1rem;
@@ -150,7 +151,6 @@
 
   &__icon {
     cursor: pointer;
-
     color: abstracts.$color-text-primary;
 
     @include abstracts.transition(0.2s, color);
