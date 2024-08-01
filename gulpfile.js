@@ -85,6 +85,7 @@ gulp.task('copy', (done) => {
     'src/fonts/**/*',
     'src/img/favicons/*',
     'src/img/**/*',
+    'src/files/**/*',
   ], {
     encoding: false,
     base: 'src',
