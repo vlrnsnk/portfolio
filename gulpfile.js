@@ -16,7 +16,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import ghPages from 'gulp-gh-pages';
 
-// Run BrowserSync server
+/* Run BrowserSync server */
 
 gulp.task('server', () => {
   browserSync({
@@ -28,7 +28,7 @@ gulp.task('server', () => {
   gulp.watch("build/*.html").on('change', browserSync.reload);
 });
 
-// Compile SCSS styles
+/* Compile SCSS styles */
 
 gulp.task('styles', () => {
   return gulp.src('src/sass/style.scss')
@@ -45,7 +45,7 @@ gulp.task('styles', () => {
     .pipe(browserSync.stream());
 });
 
-// Copy and minify JavaScript
+/* Copy and minify JavaScript */
 
 gulp.task('scripts', () => {
   return gulp.src("src/js/index.js")
@@ -55,7 +55,7 @@ gulp.task('scripts', () => {
     .pipe(browserSync.stream());
 });
 
-// Copy and minify HTML
+/* Copy and minify HTML */
 
 gulp.task('html', () => {
   return gulp.src('src/*.html')
@@ -63,7 +63,7 @@ gulp.task('html', () => {
     .pipe(gulp.dest('build'))
 });
 
-// Watch changes in files
+/* Watch changes in files */
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
@@ -71,13 +71,13 @@ gulp.task('watch', () => {
   gulp.watch('src/js/*.js', gulp.series('scripts'));
 });
 
-// Empty build folder
+/* Empty build folder */
 
 gulp.task('clean', () => {
   return deleteSync('build')
 });
 
-// Copy files from src to build
+/* Copy files from src to build */
 
 gulp.task('copy', (done) => {
   gulp.src([
@@ -95,7 +95,7 @@ gulp.task('copy', (done) => {
   done();
 });
 
-// Deploy build directory to GitHub Pages
+/* Deploy build directory to GitHub Pages */
 
 gulp.task('deploy', (done) => {
   gulp.src('build/**/*')
@@ -104,6 +104,6 @@ gulp.task('deploy', (done) => {
   done();
 });
 
-// Run main gulp task
+/* Run main gulp task */
 
 gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'scripts', 'html', 'server', 'watch'));

@@ -10,7 +10,7 @@ const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 
-// Settings for DOM elements if JS is enabled
+/* Settings for DOM elements if JS is enabled */
 
 body.style.height = '100%';
 body.style.overflow = 'hidden';
@@ -19,7 +19,7 @@ hero.style.opacity = '0';
 about.style.opacity = '0';
 hamburgerWrapper.style.display = 'flex';
 
-// Hide all projects except for default 'react' type
+/* Hide all projects except for default 'react' type */
 
 projects.forEach((project) => {
   if (project.dataset.type !== 'react') {
@@ -27,7 +27,7 @@ projects.forEach((project) => {
   }
 });
 
-// Show projects by type of clicked tab
+/* Show projects by type of clicked tab */
 
 const showProjectsByType = (type) => {
   if (type === 'all') {
@@ -55,7 +55,7 @@ const hamburgerClickHandler = () => {
 
 const removeIntroScreen = () => {
 
-  // Hide intro screen and show main page content
+  /* Hide intro screen and show main page content */
 
   intro.style.opacity = 0;
   intro.style.height = 0;
@@ -64,36 +64,36 @@ const removeIntroScreen = () => {
   body.style.height = 'auto';
   body.style.overflow = 'auto';
 
-  // Remove event listeners for removing intro screen
+  /* Remove event listeners for removing intro screen */
 
   window.removeEventListener('click', removeIntroScreen);
   window.removeEventListener('mousemove', removeIntroScreen);
   window.removeEventListener('touchmove', removeIntroScreen);
 
-  // Timeout for proper animation
+  /* Timeout for proper animation */
 
   setTimeout(() => {
     intro.classList.add('intro--hidden');
   }, 1000);
 }
 
-// Scroll to top if page reload further than the first screen
+/* Scroll to top if page reload further than the first screen */
 
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
 
-// Add hamburger click handler
+/* Add hamburger click handler */
 
 hamburger.addEventListener('click', hamburgerClickHandler);
 
-// Deactivate intro on different click/touch/mouse events
+/* Deactivate intro on different click/touch/mouse events */
 
 window.addEventListener('click', removeIntroScreen);
 window.addEventListener('mousemove', removeIntroScreen);
 window.addEventListener('touchmove', removeIntroScreen);
 
-// Handle tabs switching
+/* Handle tabs switching */
 
 tabsList.addEventListener('click', (event) => {
   tabButtons.forEach((tabButton) => {
@@ -104,7 +104,7 @@ tabsList.addEventListener('click', (event) => {
   showProjectsByType(event.target.dataset.type);
 });
 
-// Handle click on 'View All' button
+/* Handle click on 'View All' button */
 
 viewAllProjects.addEventListener('click', () => {
   tabButtons.forEach((tabButton) => {
