@@ -1,5 +1,3 @@
-'use strict';
-
 import gulp from 'gulp';
 const { task, watch, src, dest, series, parallel } = gulp;
 import browserSync from 'browser-sync';
