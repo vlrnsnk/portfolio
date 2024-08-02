@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Valeriy Anysenko's Portfolio Website",
   "private": true,
-  "main": "gulpfile.js",
+  "main": "gulpfile.mjs",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^3.0.0",
     "autoprefixer": "^10.4.19",
@@ -42,7 +42,6 @@
     "url": "https://github.com/vlrnsnk/portfolio/issues"
   },
   "homepage": "https://github.com/vlrnsnk/portfolio#readme",
-  "type": "module",
   "browserslist": [
     "last 2 versions",
     "not dead",

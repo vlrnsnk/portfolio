@@ -1,6 +1,7 @@
 'use strict';
 
 import gulp from 'gulp';
+const { task, watch, src, dest, series, parallel } = gulp;
 import browserSync from 'browser-sync';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -18,20 +19,20 @@ import ghPages from 'gulp-gh-pages';
 
 /* Run BrowserSync server */
 
-gulp.task('server', () => {
+task('server', () => {
   browserSync({
     server: {
       baseDir: 'build/',
     }
   });
 
-  gulp.watch("build/*.html").on('change', browserSync.reload);
+  watch('build/*.html').on('change', browserSync.reload);
 });
 
 /* Compile SCSS styles */
 
-gulp.task('styles', () => {
-  return gulp.src('src/sass/style.scss')
+task('styles', () => {
+  return src('src/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
@@ -41,46 +42,46 @@ gulp.task('styles', () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(dest('build/css'))
     .pipe(browserSync.stream());
 });
 
 /* Copy and minify JavaScript */
 
-gulp.task('scripts', () => {
-  return gulp.src("src/js/index.js")
+task('scripts', () => {
+  return src('src/js/index.js')
     .pipe(terser())
-    .pipe(rename("index.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(rename('index.min.js'))
+    .pipe(dest('build/js'))
     .pipe(browserSync.stream());
 });
 
 /* Copy and minify HTML */
 
-gulp.task('html', () => {
-  return gulp.src('src/*.html')
+task('html', () => {
+  return src('src/*.html')
     .pipe(minify({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'))
+    .pipe(dest('build'))
 });
 
 /* Watch changes in files */
 
-gulp.task('watch', () => {
-  gulp.watch('src/sass/**/*.scss', gulp.series('styles'));
-  gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*.js', gulp.series('scripts'));
+task('watch', () => {
+  watch('src/sass/**/*.scss', series('styles'));
+  watch('src/*.html', series('html'));
+  watch('src/js/*.js', series('scripts'));
 });
 
 /* Empty build folder */
 
-gulp.task('clean', () => {
+task('clean', () => {
   return deleteSync('build')
 });
 
 /* Copy files from src to build */
 
-gulp.task('copy', (done) => {
-  gulp.src([
+task('copy', (done) => {
+  src([
     'src/*.ico',
     'src/fonts/**/*',
     'src/img/favicons/*',
@@ -90,15 +91,15 @@ gulp.task('copy', (done) => {
     encoding: false,
     base: 'src',
   })
-    .pipe(gulp.dest('build'));
+    .pipe(dest('build'));
 
   done();
 });
 
 /* Deploy build directory to GitHub Pages */
 
-gulp.task('deploy', (done) => {
-  gulp.src('build/**/*')
+task('deploy', (done) => {
+  src('build/**/*')
     .pipe(ghPages());
 
   done();
@@ -106,4 +107,4 @@ gulp.task('deploy', (done) => {
 
 /* Run main gulp task */
 
-gulp.task('default', gulp.parallel('clean', 'copy', 'styles', 'scripts', 'html', 'server', 'watch'));
+task('default', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'server', 'watch'));
