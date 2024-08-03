@@ -77,24 +77,33 @@
     flex-direction: row;
   }
 
-  @media screen and (min-width: abstracts.$xxlg) {
-    padding-bottom: 64px;
+  @media screen and (min-width: abstracts.$lg) {
+    max-width: 704px;
+  }
+
+  @media screen and (min-width: abstracts.$xlg) {
+    max-width: 756px;
   }
 
   @media screen and (min-width: abstracts.$xxlg) {
+    padding-bottom: 64px;
+    max-width: 936px;
     gap: 48px;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    max-width: 288px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   &__image {
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     max-width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
     margin-bottom: 16px;
   }
 

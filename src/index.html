@@ -138,7 +138,11 @@
         <ul class="project">
           <li class="project__item" data-type="react">
             <a href="https://farm-products-react.netlify.app/" target="_blank" rel="nofollow noopener">
-              <img class="project__image" src="./img/projects/288x198_farm-products.jpg" alt="farm products spa build with react" width="288" height="192" loading="lazy">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/projects/farm-products/large.png 1x, ./img/projects/farm-products/large@2x.png 2x">
+                <source media="(min-width: 576px)" srcset="./img/projects/farm-products/medium.png 1x, ./img/projects/farm-products/medium@2x.png 2x">
+                <img class="project__image" src="./img/projects/farm-products/small.png" srcset="./img/projects/farm-products/small@2x.png 2x" alt="Farm Products SPA built with React" loading="lazy">
+              </picture>
             </a>
             <div class="project__wrapper">
               <p class="project__name">Farm Products</p>
