@@ -13,6 +13,10 @@
     padding-bottom: 96px;
   }
 
+  @media screen and (min-width: abstracts.$xlg) {
+    padding-bottom: 128px;
+  }
+
   &__avatar {
     display: block;
     width: 200px;
