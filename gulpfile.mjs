@@ -16,6 +16,7 @@ import terser from 'gulp-terser';
 import ghPages from 'gulp-gh-pages';
 import webp from 'gulp-webp';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
+import svgstore from 'gulp-svgstore';
 
 /* Run BrowserSync server */
 
@@ -107,14 +108,16 @@ task('copyFiles', (done) => {
 /* Copy images from src to build */
 
 task('copyImages', (done) => {
-  src('src/img/**/*.{png,jpg,svg}')
+  src('src/img/**/*.{png,jpg}')
     .pipe(dest('build/img'))
 
   done();
 });
 
+/* Compress images for build */
+
 task('optimizeImages', () => {
-  return src('src/img/**/*.{png,jpg,svg}')
+  return src('src/img/**/*.{png,jpg}')
     .pipe(sharpOptimizeImages({
       png_to_png: {
         quality: 80,
@@ -125,6 +128,17 @@ task('optimizeImages', () => {
       },
     }))
     .pipe(dest('build/img'))
+});
+
+/* Combine svg icons into one sprite */
+
+task('sprite', () => {
+  return src('src/img/icons/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true,
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'));
 });
 
 /* Deploy build directory to GitHub Pages */
@@ -138,5 +152,6 @@ task('deploy', (done) => {
 
 /* Run main gulp task */
 
-task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'scripts', 'html', 'webp', 'server', 'watch'));
-task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'scripts', 'html', 'webp'));
+task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'scripts', 'html', 'webp', 'sprite', 'server', 'watch'));
+task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'scripts', 'html', 'webp', 'sprite'));
+// task('build', parallel('clean', 'sprite'));
