@@ -126,13 +126,13 @@
             <button class="projects__tab-button projects__tab-button--active" type="button" data-type="react" aria-label="React Projects">React</button>
           </li>
           <li class="projects__tab-item">
+            <button class="projects__tab-button" type="button" data-type="full-stack" aria-label="Full Stack Projects">Full Stack</button>
+          </li>
+          <li class="projects__tab-item">
             <button class="projects__tab-button" type="button" data-type="data-visualization" aria-label="Data Visualization Projects">Data Visualization</button>
           </li>
           <li class="projects__tab-item">
             <button class="projects__tab-button" type="button" data-type="vanilla-js" aria-label="Vanilla JS Projects">Vanilla JS</button>
-          </li>
-          <li class="projects__tab-item">
-            <button class="projects__tab-button" type="button" data-type="full-stack" aria-label="Full Stack Projects">Full Stack</button>
           </li>
         </ul>
         <ul class="project">
@@ -158,9 +158,13 @@
               </a>
             </div>
           </li>
-          <li class="project__item" data-type="react">
-            <a href="https://task-maestro-vlrnsnk.netlify.app/" target="_blank" rel="nofollow noopener">
+          <li class="project__item" data-type="full-stack">
+            <a class="project__image-wrapper" href="https://task-maestro-vlrnsnk.netlify.app/" target="_blank" rel="nofollow noopener">
               <picture>
+                <source media="(min-width: 992px)" type="image/webp" srcset="./img/projects/tasks-maestro/large.webp 1x, ./img/projects/tasks-maestro/large@2x.webp 2x">
+                <source type="image/webp" srcset="./img/projects/tasks-maestro/medium.webp 1x, ./img/projects/tasks-maestro/medium@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="./img/projects/tasks-maestro/large.png 1x, ./img/projects/tasks-maestro/large@2x.png 2x">
                 <img class="project__image" src="./img/projects/tasks-maestro/medium.png" srcset="./img/projects/tasks-maestro/medium@2x.png 2x" alt="ToDo web app built with React, Bootstrap, Django, and PostgreSQL, deployed on Netlify and Railway" loading="lazy">
               </picture>
             </a>
@@ -196,34 +200,6 @@
             <img class="project__image" src="https://placehold.co/288x192.png" alt="project image" width="288" height="192" loading="lazy">
             <div class="project__wrapper">
               <p class="project__name">Vanilla JS #1 / description</p>
-              <p class="project__tech-used">Technology used</p>
-              <a href="#" class="project__link" target="_blank" rel="nofollow noopener" aria-label="Visit Project Live Demo">
-                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
-                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="project__item" data-type="full-stack">
-            <img class="project__image" src="https://placehold.co/288x192.png" alt="project image" width="288" height="192" loading="lazy">
-            <div class="project__wrapper">
-              <p class="project__name">Full Stack #1 / description</p>
-              <p class="project__tech-used">Technology used</p>
-              <a href="#" class="project__link" target="_blank" rel="nofollow noopener" aria-label="Visit Project Live Demo">
-                <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
-                  <path class="project__icon-svg-path" d="M25.4254 11.4961L12.2422 24.6792" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path class="project__icon-svg-path" d="M25.4254 21.1668V11.4961H15.7546" stroke="currentColor" stroke-width="1.41248" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li class="project__item" data-type="full-stack">
-            <img class="project__image" src="https://placehold.co/288x192.png" alt="project image" width="288" height="192" loading="lazy">
-            <div class="project__wrapper">
-              <p class="project__name">Full Stack #2 / description</p>
               <p class="project__tech-used">Technology used</p>
               <a href="#" class="project__link" target="_blank" rel="nofollow noopener" aria-label="Visit Project Live Demo">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">

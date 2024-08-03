@@ -110,11 +110,13 @@
     margin: 0 auto 16px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    opacity: 0.9;
 
-    @include abstracts.transition(0.2s, all);
+    @include abstracts.transition(0.2s, transform, opacity);
 
     &:hover {
       transform: scale(1.02);
+      opacity: 1;
     }
 
     &:focus {
@@ -125,6 +127,8 @@
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
       overflow: hidden;
+      text-decoration: none;
+      color: abstracts.$color-text-secondary;
     }
   }
 
