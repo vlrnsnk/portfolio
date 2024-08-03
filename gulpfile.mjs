@@ -14,6 +14,7 @@ import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import ghPages from 'gulp-gh-pages';
+import webp from 'gulp-webp';
 
 /* Run BrowserSync server */
 
@@ -62,6 +63,14 @@ task('html', () => {
     .pipe(dest('build'))
 });
 
+/* Create .webp images from .png and .jpg */
+
+task('webp', () => {
+  return src('src/img/**/*.{jpg,png}', {encoding: false})
+    .pipe(webp({quality: 90}))
+    .pipe(dest('build/img'));
+});
+
 /* Watch changes in files */
 
 task('watch', () => {
@@ -73,7 +82,7 @@ task('watch', () => {
 /* Empty build folder */
 
 task('clean', () => {
-  return deleteSync('build')
+  return deleteSync('build');
 });
 
 /* Copy files from src to build */
@@ -105,4 +114,4 @@ task('deploy', (done) => {
 
 /* Run main gulp task */
 
-task('default', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'server', 'watch'));
+task('default', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'webp', 'server', 'watch'));
