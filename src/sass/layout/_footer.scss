@@ -99,10 +99,12 @@
     border-radius: 50%;
     color: abstracts.$color-text-secondary;
 
-    @include abstracts.transition(0.2s, color, background-color);
+    @include abstracts.transition(0.2s, color, background-color, box-shadow);
 
     &:hover {
       color: abstracts.$color-brand-primary;
+      box-shadow: 0 0 4px abstracts.$color-brand-primary;
+      text-shadow: 0 0 4px abstracts.$color-brand-primary;
     }
 
     &:focus {
@@ -112,6 +114,7 @@
     &:active {
       background-color: abstracts.$highlight-brand-primary;
       color: abstracts.$color-background;
+      box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
     }
   }
 }

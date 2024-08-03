@@ -83,6 +83,7 @@
 
       &:focus {
         outline-color: abstracts.$color-brand-primary;
+        box-shadow: 0 0 4px abstracts.$color-brand-primary;
       }
     }
 
@@ -99,8 +100,15 @@
       color: abstracts.$color-background;
       border: none;
 
+      
+
+      &:hover {
+        box-shadow: 0 0 4px abstracts.$color-text-primary;
+      }
+
       &:active {
         color: abstracts.$color-background;
+        box-shadow: 0 0 4px abstracts.$color-brand-primary;
       }
     }
 

@@ -154,4 +154,3 @@ task('deploy', (done) => {
 
 task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'scripts', 'html', 'webp', 'sprite', 'server', 'watch'));
 task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'scripts', 'html', 'webp', 'sprite'));
-// task('build', parallel('clean', 'sprite'));

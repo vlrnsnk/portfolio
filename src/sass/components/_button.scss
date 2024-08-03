@@ -15,7 +15,7 @@
   cursor: pointer;
   text-align: center;
 
-  @include abstracts.transition(0.2s, color, border-color);
+  @include abstracts.transition(0.2s, color, border-color, box-shadow);
 
   @media screen and (min-width: abstracts.$sm) {
     padding-right: 19px;
@@ -40,6 +40,7 @@
   &:hover {
     color: abstracts.$color-brand-primary;
     border-color: abstracts.$highlight-brand-primary;
+    box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
   }
 
   &:focus {
@@ -49,6 +50,7 @@
   &:active {
     background-color: abstracts.$color-brand-primary;
     color: abstracts.$color-background;
+    box-shadow: 0 0 4px abstracts.$color-brand-primary;
   }
 
   &--navigation-contact {
