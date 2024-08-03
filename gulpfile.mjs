@@ -115,3 +115,4 @@ task('deploy', (done) => {
 /* Run main gulp task */
 
 task('default', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'webp', 'server', 'watch'));
+task('build', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'webp'));
