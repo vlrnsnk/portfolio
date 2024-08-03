@@ -96,6 +96,8 @@
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
+    border-radius: 12px;
+    border: 1px solid abstracts.$highlight-button-primary;
   }
 
   &__image {
@@ -104,12 +106,16 @@
     max-width: 100%;
     height: auto;
     aspect-ratio: 3 / 2;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: auto 1fr;
+    column-gap: 8px;
+    padding: 0 16px 16px;
   }
 
   &__name {
@@ -119,6 +125,7 @@
     line-height: 1.5;
     color: abstracts.$color-text-tertiary;
     grid-column: 1 / 3;
+    margin-bottom: 8px;
   }
 
   &__tech-used {
@@ -134,6 +141,7 @@
   &__url {
     display: flex;
     justify-content: end;
+    align-self: end;
     padding: 4px 0 4px 10px;
     color: abstracts.$color-text-primary;
 

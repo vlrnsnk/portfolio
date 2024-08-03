@@ -30,10 +30,14 @@
   }
 
   &__item {
-    padding: 24px;
+    padding: 16px;
     border: 1px solid abstracts.$highlight-button-primary;
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: abstracts.$color-service-item-background;
+
+    @media screen and (min-width: abstracts.$sm) {
+      padding: 24px;
+    }
 
     @media screen and (min-width: abstracts.$lg) {
       width: 294px;
