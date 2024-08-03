@@ -111,6 +111,7 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     opacity: 0.9;
+    overflow: hidden;
 
     @include abstracts.transition(0.2s, transform, opacity);
 
@@ -124,6 +125,7 @@
     }
 
     &-wrapper {
+      display: block;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
       overflow: hidden;

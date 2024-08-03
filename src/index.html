@@ -181,12 +181,18 @@
             </div>
           </li>
           <li class="project__item" data-type="data-visualization">
-            <a href="https://vlrnsnk.github.io/bar-chart/" target="_blank" rel="nofollow noopener">
-              <img class="project__image" src="./img/projects/288x198_bar-chart.jpg" alt="data visualization of united states gdp using d3 javascript library" width="288" height="192" loading="lazy">
+            <a class="project__image-wrapper" href="https://vlrnsnk.github.io/bar-chart/" target="_blank" rel="nofollow noopener">
+              <picture>
+                <source media="(min-width: 992px)" type="image/webp" srcset="./img/projects/bar-chart/large.webp 1x, ./img/projects/bar-chart/large@2x.webp 2x">
+                <source type="image/webp" srcset="./img/projects/bar-chart/medium.webp 1x, ./img/projects/bar-chart/medium@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="./img/projects/tasks-maestro/large.png 1x, ./img/projects/tasks-maestro/large@2x.png 2x">
+                <img class="project__image" src="./img/projects/bar-chart/medium.png" srcset="./img/projects/bar-chart/medium@2x.png 2x" alt="Data visualization of U.S. GDP using the D3 JavaScript library." loading="lazy">
+              </picture>
             </a>
             <div class="project__wrapper">
               <p class="project__name">United States GDP</p>
-              <p class="project__tech-used">Bar chart drawn using D3.js library and deployed to GitHub Pages</p>
+              <p class="project__tech-used">Bar chart created with the D3.js library and deployed on GitHub Pages.</p>
               <a href="https://vlrnsnk.github.io/bar-chart/" class="project__link" target="_blank" rel="nofollow noopener" aria-label="Visit Bar Chart Project Live Demo">
                 <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="37.666" height="37.666" rx="18.833" transform="matrix(-1 0 0 1 37.6666 0.667236)" fill="currentColor"/>
