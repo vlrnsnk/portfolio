@@ -15,6 +15,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import ghPages from 'gulp-gh-pages';
 import webp from 'gulp-webp';
+import sharpOptimizeImages from 'gulp-sharp-optimize-images';
 
 /* Run BrowserSync server */
 
@@ -81,18 +82,18 @@ task('watch', () => {
 
 /* Empty build folder */
 
-task('clean', () => {
-  return deleteSync('build');
+task('clean', (done) => {
+  deleteSync('build');
+
+  done();
 });
 
 /* Copy files from src to build */
 
-task('copy', (done) => {
+task('copyFiles', (done) => {
   src([
     'src/*.ico',
     'src/fonts/**/*',
-    'src/img/favicons/*',
-    'src/img/**/*',
     'src/files/**/*',
   ], {
     encoding: false,
@@ -101,6 +102,29 @@ task('copy', (done) => {
     .pipe(dest('build'));
 
   done();
+});
+
+/* Copy images from src to build */
+
+task('copyImages', (done) => {
+  src('src/img/**/*.{png,jpg,svg}')
+    .pipe(dest('build/img'))
+
+  done();
+});
+
+task('optimizeImages', () => {
+  return src('src/img/**/*.{png,jpg,svg}')
+    .pipe(sharpOptimizeImages({
+      png_to_png: {
+        quality: 80,
+      },
+      jpg_to_jpg: {
+        quality: 80,
+        mozjpeg: true,
+      },
+    }))
+    .pipe(dest('build/img'))
 });
 
 /* Deploy build directory to GitHub Pages */
@@ -114,5 +138,5 @@ task('deploy', (done) => {
 
 /* Run main gulp task */
 
-task('default', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'webp', 'server', 'watch'));
-task('build', parallel('clean', 'copy', 'styles', 'scripts', 'html', 'webp'));
+task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'scripts', 'html', 'webp', 'server', 'watch'));
+task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'scripts', 'html', 'webp'));
