@@ -17,6 +17,7 @@ import ghPages from 'gulp-gh-pages';
 import webp from 'gulp-webp';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
 import svgstore from 'gulp-svgstore';
+import svgmin from 'gulp-svgmin';
 
 /* Run BrowserSync server */
 
@@ -136,6 +137,7 @@ task('optimizeImages', () => {
 
 task('sprite', () => {
   return src('src/img/icons/*.svg')
+    .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true,
     }))
