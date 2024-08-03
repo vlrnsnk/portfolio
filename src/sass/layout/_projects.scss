@@ -102,6 +102,7 @@
 
   &__image {
     display: block;
+    position: relative;
     object-fit: cover;
     max-width: 100%;
     height: auto;
@@ -109,6 +110,22 @@
     margin: 0 auto 16px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+
+    @include abstracts.transition(0.2s, all);
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:focus {
+      outline-color: abstracts.$color-brand-primary;
+    }
+
+    &-wrapper {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      overflow: hidden;
+    }
   }
 
   &__wrapper {
@@ -138,7 +155,7 @@
     align-self: center;
   }
 
-  &__url {
+  &__link {
     display: flex;
     justify-content: end;
     align-self: end;
