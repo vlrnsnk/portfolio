@@ -59,6 +59,7 @@ const removeIntroScreen = () => {
 
   intro.style.opacity = 0;
   intro.style.height = 0;
+  intro.style.zIndex = -1;
   hero.style.opacity = 1;
   about.style.opacity = 1;
   body.style.height = 'auto';
