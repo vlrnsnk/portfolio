@@ -108,7 +108,9 @@ task('copyFiles', (done) => {
 /* Copy images from src to build */
 
 task('copyImages', (done) => {
-  src('src/img/**/*.{png,jpg}')
+  src('src/img/**/*.{png,jpg}', {
+    encoding: false,
+  })
     .pipe(dest('build/img'))
 
   done();
