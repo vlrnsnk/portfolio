@@ -72,7 +72,10 @@
       </section>
       <section class="hero">
         <div class="hero__grid"></div>
-        <img class="hero__avatar" width="200" height="200" src="./img/avatar.png" alt="avatar">
+        <picture>
+          <source type="image/webp" srcset="./img/avatar.webp 1x, ./img/avatar@2x.webp 2x">
+          <img class="hero__avatar" src="./img/avatar.png" srcset="./img/avatar@2x.png 2x" width="200" height="200" alt="avatar">
+        </picture>
         <h2 class="hero__title title">Valeriy Anysenko</h2>
         <div class="hero__subtitle-wrapper">
           <p class="hero__subtitle subtitle">Full Stack Wizard </p><span class="hero__subtitle-emoji">🧙</span>
