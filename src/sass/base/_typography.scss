@@ -3,5 +3,6 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: abstracts.$color-background;
+  // background-color: abstracts.$color-background;
+  background-color: var(--color-background);
 }
