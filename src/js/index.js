@@ -178,3 +178,7 @@ contactForm.addEventListener('submit', async (event) => {
     submitResult.classList.remove('contact-form__submit-result--fail');
   }, 5000);
 });
+
+themeSwitch.addEventListener('click', () => {
+  body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+});
