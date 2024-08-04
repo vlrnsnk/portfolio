@@ -12,6 +12,7 @@ const viewAllProjects = document.querySelector('#view-all-projects');
 const contactForm = document.querySelector('.contact-form');
 const siteNavigation = document.querySelector('.site-navigation');
 const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
+const themeSwitch = document.querySelector('.theme-switch');
 
 /* Settings for DOM elements if JS is enabled */
 
@@ -91,16 +92,16 @@ window.addEventListener('beforeunload', () => {
 
 hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
+/* Add stub theme switch click handler */
+
+themeSwitch.addEventListener('click', (event) => {
+  event.stopPropagation();
+  console.log('theme switch');
+});
+
 /* Add toggle active class on site navigation item */
 
 siteNavigation.addEventListener('click', (event) => {
-  // console.log(siteNavigationLinks);
-  // for (let i = 0; i < siteNavigationLinks.length - 1; i++) {
-  //   if (siteNavigationLinks[i].classList.contains('site-navigation__link--active')) {
-  //     siteNavigationLinks[i].classList.remove('site-navigation__link--active');
-  //   }
-  // }
-
   siteNavigationLinks.forEach((siteNavigationLink) => {
     if (siteNavigationLink.classList.contains('site-navigation__link--active')) {
       siteNavigationLink.classList.remove('site-navigation__link--active');
