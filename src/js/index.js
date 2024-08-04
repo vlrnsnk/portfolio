@@ -55,6 +55,8 @@ const hamburgerClickHandler = () => {
   mobileMenu.classList.toggle('main-navigation__wrapper--active');
   hamburger.classList.toggle('hamburger--cross');
   hamburgerWrapper.classList.toggle('hamburger-wrapper--active');
+
+  body.style.overflow = body.style.overflow !== 'hidden' ? 'hidden' : 'auto';
 };
 
 const removeIntroScreen = () => {
@@ -109,6 +111,7 @@ siteNavigation.addEventListener('click', (event) => {
   });
 
   event.target.classList.add('site-navigation__link--active');
+  hamburgerClickHandler();
 });
 
 /* Deactivate intro on different click/touch/mouse events */
