@@ -113,7 +113,9 @@ siteNavigation.addEventListener('click', (event) => {
   });
 
   event.target.classList.add('site-navigation__link--active');
-  hamburgerClickHandler();
+  if (window.screen.width < 992) {
+    hamburgerClickHandler();
+  }
 });
 
 /* Deactivate intro on different click/touch/mouse events */
