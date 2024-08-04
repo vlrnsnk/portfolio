@@ -141,25 +141,22 @@ viewAllProjects.addEventListener('click', () => {
   showProjectsByType('all');
 });
 
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
+  // console.log(contactForm);
+  const formData = new FormData(contactForm);
+  // console.log(...formData);
+  postData(formData);
+});
 
-// contactForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
+async function postData(formattedFormData) {
+  const response = await fetch('http://localhost:8080/contact-form-handler.php', {
+    method: 'POST',
+    body: formattedFormData,
+  });
 
-//   console.log(contactForm);
-//   const formattedFormData = new FormData(contactForm);
-//   console.log(formattedFormData);
-//   postData(formattedFormData);
-// });
+  const data = await response.json();
 
-// async function postData(formattedFormData) {
-//   const response = await fetch('http://localhost:8080', {
-//     method: 'POST',
-//     body: formattedFormData,
-//     mode: 'no-cors',
-//   });
-
-//   const data = await response.json();
-
-//   console.log(data);
-// }
+  console.log(data);
+}
