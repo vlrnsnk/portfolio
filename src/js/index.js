@@ -10,6 +10,8 @@ const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 const contactForm = document.querySelector('.contact-form');
+const siteNavigation = document.querySelector('.site-navigation');
+const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
 
 /* Settings for DOM elements if JS is enabled */
 
@@ -89,6 +91,25 @@ window.addEventListener('beforeunload', () => {
 
 hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
+/* Add toggle active class on site navigation item */
+
+siteNavigation.addEventListener('click', (event) => {
+  // console.log(siteNavigationLinks);
+  // for (let i = 0; i < siteNavigationLinks.length - 1; i++) {
+  //   if (siteNavigationLinks[i].classList.contains('site-navigation__link--active')) {
+  //     siteNavigationLinks[i].classList.remove('site-navigation__link--active');
+  //   }
+  // }
+
+  siteNavigationLinks.forEach((siteNavigationLink) => {
+    if (siteNavigationLink.classList.contains('site-navigation__link--active')) {
+      siteNavigationLink.classList.remove('site-navigation__link--active');
+    }
+  });
+
+  event.target.classList.add('site-navigation__link--active');
+});
+
 /* Deactivate intro on different click/touch/mouse events */
 
 window.addEventListener('click', removeIntroScreen);
@@ -115,6 +136,8 @@ viewAllProjects.addEventListener('click', () => {
 
   showProjectsByType('all');
 });
+
+
 
 // contactForm.addEventListener('submit', (event) => {
 //   event.preventDefault();
