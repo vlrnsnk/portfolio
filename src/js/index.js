@@ -9,6 +9,7 @@ const tabsList = document.querySelector('.projects__tab-list');
 const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
+const contactForm = document.querySelector('.contact-form');
 
 /* Settings for DOM elements if JS is enabled */
 
@@ -86,7 +87,7 @@ window.addEventListener('beforeunload', () => {
 
 /* Add hamburger click handler */
 
-hamburger.addEventListener('click', hamburgerClickHandler);
+hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
 /* Deactivate intro on different click/touch/mouse events */
 
@@ -114,3 +115,24 @@ viewAllProjects.addEventListener('click', () => {
 
   showProjectsByType('all');
 });
+
+// contactForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+
+//   console.log(contactForm);
+//   const formattedFormData = new FormData(contactForm);
+//   console.log(formattedFormData);
+//   postData(formattedFormData);
+// });
+
+// async function postData(formattedFormData) {
+//   const response = await fetch('http://localhost:8080', {
+//     method: 'POST',
+//     body: formattedFormData,
+//     mode: 'no-cors',
+//   });
+
+//   const data = await response.json();
+
+//   console.log(data);
+// }
