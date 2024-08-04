@@ -141,22 +141,44 @@ viewAllProjects.addEventListener('click', () => {
   showProjectsByType('all');
 });
 
-contactForm.addEventListener('submit', (event) => {
+contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  // console.log(contactForm);
   const formData = new FormData(contactForm);
-  // console.log(...formData);
-  postData(formData);
+  // formData.delete('name');
+  console.log(...formData);
+
+  await fetch('http://localhost:8080/contact-form-handler.php', {
+    method: 'POST',
+    body: formData,
+  })
+  .then((response) => {
+    console.log(response.status);
+    if (response.status === 201) {
+      return response.json();
+    }
+
+    throw new Error('Failed form submit');
+  })
+  .then((json) => {
+    console.log('there was success');
+    console.log(json);
+    contactForm.innerHTML = 'Success!';
+  })
+  .catch((error) => {
+    contactForm.innerHTML = 'Failed!';
+    console.log('there was an error');
+    console.log(error);
+  })
 });
 
-async function postData(formattedFormData) {
-  const response = await fetch('http://localhost:8080/contact-form-handler.php', {
-    method: 'POST',
-    body: formattedFormData,
-  });
+// async function postData(formattedFormData) {
+//   const response = await fetch('http://localhost:8080/contact-form-handler.php', {
+//     method: 'POST',
+//     body: formattedFormData,
+//   });
 
-  const data = await response.json();
+//   const data = await response.json();
 
-  console.log(data);
-}
+//   console.log(data);
+// }
