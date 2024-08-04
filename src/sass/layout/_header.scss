@@ -51,7 +51,7 @@
       height: 100%;
       z-index: 1;
       background-color: var(--color-background);
-      color: abstracts.$color-text-primary;
+      color: var(--color-text-primary);
       opacity: 0.95;
     }
   }
@@ -67,14 +67,14 @@
 
 .logo {
   font-family: "Oleo Script", "Brush Script MT", fantasy;
-  color: abstracts.$color-text-primary;
+  color: var(--color-text-primary);
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 1.375;
   padding: 7px 0px 8px 8px;
 
   &:focus {
-    outline-color: abstracts.$color-brand-primary;
+    outline-color: var(--color-brand-primary);
   }
 }
 
@@ -121,21 +121,21 @@
 
   &__link {
     text-decoration: none;
-    color: abstracts.$color-text-primary;
+    color: var(--color-text-primary);
     padding: 10px;
 
     &:hover {
-      color: abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
 
       @include abstracts.transition(0.2s, color);
     }
 
     &:active {
-      color: abstracts.$highlight-brand-primary;
+      color: var(--highlight-brand-primary);
     }
 
     &--active {
-      color: abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
     }
   }
 }
@@ -148,20 +148,20 @@
 
   &__icon {
     cursor: pointer;
-    color: abstracts.$color-text-primary;
+    color: var(--color-text-primary);
 
     @include abstracts.transition(0.2s, color);
 
     &:hover {
-      color: abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
     }
 
     &:focus {
-      outline: 2px solid abstracts.$color-brand-primary;
+      outline: 2px solid var(--color-brand-primary);
     }
 
     &:active {
-      color: abstracts.$highlight-brand-primary;
+      color: var(--highlight-brand-primary);
     }
   }
 }

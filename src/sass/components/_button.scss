@@ -7,11 +7,11 @@
   line-height: 1.2;
   min-height: 48px;
   text-decoration: none;
-  color: abstracts.$color-text-primary;
+  color: var(--color-text-primary);
   background-color: var(--color-background);
   padding: 13px 16px;
   border-radius: 75px;
-  border: 1px solid abstracts.$color-brand-primary;
+  border: 1px solid var(--color-brand-primary);
   cursor: pointer;
   text-align: center;
 
@@ -38,19 +38,19 @@
   }
 
   &:hover:enabled {
-    color: abstracts.$color-brand-primary;
-    border-color: abstracts.$highlight-brand-primary;
-    box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
+    color: var(--color-brand-primary);
+    border-color: var(--highlight-brand-primary);
+    box-shadow: 0 0 4px var(--highlight-brand-primary);
   }
 
   &:focus:enabled {
-    outline-color: abstracts.$color-brand-primary;
+    outline-color: var(--color-brand-primary);
   }
 
   &:active:enabled {
-    background-color: abstracts.$color-brand-primary;
+    background-color: var(--color-brand-primary);
     color: var(--color-background);
-    box-shadow: 0 0 4px abstracts.$color-brand-primary;
+    box-shadow: 0 0 4px var(--color-brand-primary);
   }
 
   &--navigation-contact {

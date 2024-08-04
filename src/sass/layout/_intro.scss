@@ -39,15 +39,15 @@
 
   &__text {
     font-size: 2.25rem;
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
 
     &-accent {
-      color: abstracts.$color-text-primary;
+      color: var(--color-text-primary);
     }
   }
 
   &__icon {
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
     animation: float 3s ease-in-out infinite;
   }
 

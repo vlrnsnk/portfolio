@@ -1,4 +1,18 @@
 [data-theme="light"] {
+  /* Base colors */
   --color-background: #e0e8f6;
-  
+  --color-heading: #484e53;
+  --color-service-item-background: #bce7fa;
+  --color-brand-primary: #4fc3f7;
+
+  --color-text-primary: #1c1e53;
+  --color-text-secondary: #484e53;
+  --color-text-tertiary: #484e53;
+  --color-text-form-input: #8987a1;
+
+  /* Hover state */
+  --highlight-brand-primary: color.scale(var(--color-brand-primary), $lightness: -30%);
+  --highlight-button-primary: #484e53;
+
+  /* Active state */
 }

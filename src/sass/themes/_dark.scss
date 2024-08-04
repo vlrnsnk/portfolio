@@ -1,12 +1,18 @@
 [data-theme="dark"] {
+  /* Base colors */
   --color-background: #1a1a1a;
-  // --header-background-color: #ffffff;
-  // --header-border-color: #e5e8ea;
-  // --header-menu-item-color: #231f20;
-  // --header-theme-switch-background-color: #cccccc;
-  // --header-theme-switch-before-background-color: #ffffff;
-  // --header-theme-switch-checked-background-color: #2196f3;
+  --color-heading: #f5f8ff;
+  --color-service-item-background: #2b2b2b;
+  --color-brand-primary: #4fc3f7;
 
-  // --main-content-background-color: #ffffff;
-  // --main-content-text-color: #231f20;
+  --color-text-primary: #e1e1e1;
+  --color-text-secondary: #a9a9a9;
+  --color-text-tertiary: #c1c1c1;
+  --color-text-form-input: #8987a1;
+
+  /* Hover state */
+  --highlight-brand-primary: color.scale(var(--color-brand-primary), $lightness: -30%);
+  --highlight-button-primary: #484e53;
+
+  /* Active state */
 }

@@ -42,34 +42,34 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5;
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
     background-color: var(--color-background);
     padding: 11px 16px;
     border-radius: 50px;
-    border: 1px solid abstracts.$highlight-button-primary;
+    border: 1px solid var(--highlight-button-primary);
     cursor: pointer;
 
     @include abstracts.transition(0.2s, background-color, color, border-color);
 
     &:hover {
-      background-color: abstracts.$highlight-button-primary;
-      color: abstracts.$color-text-primary;
-      box-shadow: 0 0 4px abstracts.$color-text-primary;
+      background-color: var(--highlight-button-primary);
+      color: var(--color-text-primary);
+      box-shadow: 0 0 4px var(--color-text-primary);
     }
 
     &:focus {
-      outline-color: abstracts.$color-brand-primary;
+      outline-color: var(--color-brand-primary);
     }
 
     &:active {
-      color: abstracts.$color-brand-primary;
-      border-color: abstracts.$color-brand-primary;
-      box-shadow: 0 0 4px abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
+      border-color: var(--color-brand-primary);
+      box-shadow: 0 0 4px var(--color-brand-primary);
     }
 
     &--active {
-      background-color: abstracts.$highlight-button-primary;
-      color: abstracts.$color-text-primary;
+      background-color: var(--highlight-button-primary);
+      color: var(--color-text-primary);
     }
   }
 }
@@ -107,7 +107,7 @@
     max-width: 100%;
     margin: 0 auto;
     border-radius: 12px;
-    border: 1px solid abstracts.$highlight-button-primary;
+    border: 1px solid var(--highlight-button-primary);
   }
 
   &__image {
@@ -131,7 +131,7 @@
     }
 
     &:focus {
-      outline-color: abstracts.$color-brand-primary;
+      outline-color: var(--color-brand-primary);
     }
 
     &-wrapper {
@@ -140,7 +140,7 @@
       border-top-right-radius: 12px;
       overflow: hidden;
       text-decoration: none;
-      color: abstracts.$color-text-secondary;
+      color: var(--color-text-secondary);
     }
   }
 
@@ -156,7 +156,7 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5;
-    color: abstracts.$color-text-tertiary;
+    color: var(--color-text-tertiary);
     grid-column: 1 / 3;
     margin-bottom: 8px;
   }
@@ -166,7 +166,7 @@
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.5;
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
     grid-column: 1 / 2;
     align-self: center;
   }
@@ -176,24 +176,24 @@
     justify-content: end;
     align-self: end;
     padding: 4px 0 4px 10px;
-    color: abstracts.$color-text-primary;
+    color: var(--color-text-primary);
 
     @include abstracts.transition(0.2s, color);
 
     &:hover {
-      color: abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
     }
 
     &:hover path {
-      color: abstracts.$color-text-primary;
+      color: var(--color-text-primary);
     }
 
     &:focus {
-      outline-color: abstracts.$color-brand-primary;
+      outline-color: var(--color-brand-primary);
     }
 
     &:active {
-      color: abstracts.$highlight-brand-primary;
+      color: var(--highlight-brand-primary);
     }
 
     &:active path {
@@ -206,16 +206,16 @@
       @include abstracts.transition(0.2s, box-shadow);
 
       &:hover {
-        box-shadow: 0 0 4px abstracts.$color-brand-primary;
+        box-shadow: 0 0 4px var(--color-brand-primary);
       }
 
       &:active {
-        box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
+        box-shadow: 0 0 4px var(--highlight-brand-primary);
       }
     }
   }
 
   &__icon-svg-path {
-    color: abstracts.$highlight-brand-primary;
+    color: var(--highlight-brand-primary);
   }
 }

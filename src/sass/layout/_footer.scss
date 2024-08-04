@@ -32,7 +32,7 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1;
-    color: abstracts.$color-heading;
+    color: var(--color-heading);
   }
 
   &__divider {
@@ -63,20 +63,20 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5;
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
 
     @include abstracts.transition(0.2s, color);
 
     &:hover {
-      color: abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
     }
 
     &:focus {
-      outline-color: abstracts.$color-brand-primary;
+      outline-color: var(--color-brand-primary);
     }
 
     &:active {
-      color: abstracts.$highlight-brand-primary;
+      color: var(--highlight-brand-primary);
     }
   }
 }
@@ -97,24 +97,24 @@
   &__icon {
     display: block;
     border-radius: 50%;
-    color: abstracts.$color-text-secondary;
+    color: var(--color-text-secondary);
 
     @include abstracts.transition(0.2s, color, background-color, box-shadow);
 
     &:hover {
-      color: abstracts.$color-brand-primary;
-      box-shadow: 0 0 4px abstracts.$color-brand-primary;
-      text-shadow: 0 0 4px abstracts.$color-brand-primary;
+      color: var(--color-brand-primary);
+      box-shadow: 0 0 4px var(--color-brand-primary);
+      text-shadow: 0 0 4px var(--color-brand-primary);
     }
 
     &:focus {
-      outline-color: abstracts.$color-brand-primary;
+      outline-color: var(--color-brand-primary);
     }
 
     &:active {
-      background-color: abstracts.$highlight-brand-primary;
+      background-color: var(--highlight-brand-primary);
       color: var(--color-background);
-      box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
+      box-shadow: 0 0 4px var(--highlight-brand-primary);
     }
   }
 }
@@ -124,5 +124,5 @@
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
-  color: abstracts.$color-text-secondary;
+  color: var(--color-text-secondary);
 }

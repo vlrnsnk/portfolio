@@ -5,7 +5,7 @@
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.5;
-  background-image: linear-gradient(to right, abstracts.$color-brand-primary, abstracts.$color-text-primary);
+  background-image: linear-gradient(to right, var(--color-brand-primary), var(--color-text-primary));
   color: transparent;
   background-clip: text;
   text-align: center;

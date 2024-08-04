@@ -2,7 +2,7 @@
 
 .hamburger {
   cursor: pointer;
-  background-color: abstracts.$color-heading;
+  background-color: var(--color-heading);
   border: none;
   border-radius: 1px;
   width: 32px;
@@ -18,7 +18,7 @@
   &::before,
   &::after {
     content: "";
-    background-color: abstracts.$color-heading;
+    background-color: var(--color-heading);
     border-radius: 1px;
     width: 16px;
     height: 2px;
@@ -36,7 +36,7 @@
   }
 
   &:focus {
-    outline-color: abstracts.$color-brand-primary;
+    outline-color: var(--color-brand-primary);
   }
 
   &-wrapper {
@@ -49,13 +49,13 @@
     &:hover .hamburger,
     &:hover .hamburger::before,
     &:hover .hamburger::after {
-      background-color: abstracts.$color-brand-primary;
+      background-color: var(--color-brand-primary);
     }
 
     &:active .hamburger,
     &:active .hamburger::before,
     &:active .hamburger::after {
-      background-color: abstracts.$highlight-brand-primary;
+      background-color: var(--highlight-brand-primary);
     }
 
     &--active {

@@ -39,9 +39,9 @@
 
   &__item {
     padding: 16px;
-    border: 1px solid abstracts.$highlight-button-primary;
+    border: 1px solid var(--highlight-button-primary);
     border-radius: 12px;
-    background-color: abstracts.$color-service-item-background;
+    background-color: var(--color-service-item-background);
 
     @media screen and (min-width: abstracts.$sm) {
       padding: 24px;
@@ -63,7 +63,7 @@
     width: 48px;
     height: 48px;
     padding: 8px;
-    background-color: abstracts.$color-heading;
+    background-color: var(--color-heading);
     border-radius: 9px;
     margin-bottom: 19px;
     color: var(--color-background);
@@ -73,7 +73,7 @@
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.5;
-    color: abstracts.$color-heading;
+    color: var(--color-heading);
     margin-bottom: 18px;
 
     @media screen and (min-width: abstracts.$xlg) {
@@ -86,7 +86,7 @@
     font-size: 1rem;
     line-height: 1.5;
     text-align: justify;
-    color: abstracts.$color-text-primary;
+    color: var(--color-text-primary);
 
     @media screen and (min-width: abstracts.$xlg) {
       font-size: 0.9rem;
