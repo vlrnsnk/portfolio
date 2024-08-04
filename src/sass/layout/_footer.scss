@@ -113,7 +113,7 @@
 
     &:active {
       background-color: abstracts.$highlight-brand-primary;
-      color: abstracts.$color-background;
+      color: var(--color-background);
       box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
     }
   }

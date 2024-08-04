@@ -50,7 +50,7 @@
       position: fixed;
       height: 100%;
       z-index: 1;
-      background-color: abstracts.$color-background;
+      background-color: var(--color-background);
       color: abstracts.$color-text-primary;
       opacity: 0.95;
     }
@@ -143,7 +143,7 @@
 .theme-switch {
   display: block;
   margin-left: auto;
-  background-color: abstracts.$color-background;
+  background-color: var(--color-background);
   border: none;
 
   &__icon {

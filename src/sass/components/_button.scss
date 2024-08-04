@@ -8,7 +8,7 @@
   min-height: 48px;
   text-decoration: none;
   color: abstracts.$color-text-primary;
-  background-color: abstracts.$color-background;
+  background-color: var(--color-background);
   padding: 13px 16px;
   border-radius: 75px;
   border: 1px solid abstracts.$color-brand-primary;
@@ -49,7 +49,7 @@
 
   &:active:enabled {
     background-color: abstracts.$color-brand-primary;
-    color: abstracts.$color-background;
+    color: var(--color-background);
     box-shadow: 0 0 4px abstracts.$color-brand-primary;
   }
 
