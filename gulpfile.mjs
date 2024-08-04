@@ -52,7 +52,7 @@ task('styles', () => {
 
 task('scripts', () => {
   return src('src/js/index.js')
-    .pipe(terser())
+    // .pipe(terser())
     .pipe(rename('index.min.js'))
     .pipe(dest('build/js'))
     .pipe(browserSync.stream());
@@ -97,6 +97,8 @@ task('copyFiles', (done) => {
     'src/*.ico',
     'src/fonts/**/*',
     'src/files/**/*',
+    'src/img/favicons/site.webmanifest',
+    'src/img/favicons/browserconfig.xml',
   ], {
     encoding: false,
     base: 'src',
