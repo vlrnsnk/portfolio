@@ -10,6 +10,8 @@ const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 const contactForm = document.querySelector('.contact-form');
+const contactFormButton = contactForm.querySelector('.contact-form__button');
+const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
 const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
 const themeSwitch = document.querySelector('.theme-switch');
@@ -143,17 +145,14 @@ viewAllProjects.addEventListener('click', () => {
 
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-
+  contactFormButton.disabled = true;
   const formData = new FormData(contactForm);
-  // formData.delete('name');
-  console.log(...formData);
 
   await fetch('http://localhost:8080/contact-form-handler.php', {
     method: 'POST',
     body: formData,
   })
   .then((response) => {
-    console.log(response.status);
     if (response.status === 201) {
       return response.json();
     }
@@ -161,24 +160,18 @@ contactForm.addEventListener('submit', async (event) => {
     throw new Error('Failed form submit');
   })
   .then((json) => {
-    console.log('there was success');
-    console.log(json);
-    contactForm.innerHTML = 'Success!';
+    submitResult.textContent = 'Your message was sent successfully!';
+    submitResult.classList.add('contact-form__submit-result--success');
   })
   .catch((error) => {
-    contactForm.innerHTML = 'Failed!';
-    console.log('there was an error');
-    console.log(error);
-  })
+    submitResult.textContent = 'There was an error sending Your message. Please, try contacting me via e-mail.';
+    submitResult.classList.add('contact-form__submit-result--fail');
+  });
+
+  setTimeout(() => {
+    contactFormButton.disabled = false;
+    submitResult.textContent = '';
+    submitResult.classList.remove('contact-form__submit-result--success');
+    submitResult.classList.remove('contact-form__submit-result--fail');
+  }, 5000);
 });
-
-// async function postData(formattedFormData) {
-//   const response = await fetch('http://localhost:8080/contact-form-handler.php', {
-//     method: 'POST',
-//     body: formattedFormData,
-//   });
-
-//   const data = await response.json();
-
-//   console.log(data);
-// }

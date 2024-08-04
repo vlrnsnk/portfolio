@@ -37,17 +37,17 @@
     padding-left: 32px;
   }
 
-  &:hover {
+  &:hover:enabled {
     color: abstracts.$color-brand-primary;
     border-color: abstracts.$highlight-brand-primary;
     box-shadow: 0 0 4px abstracts.$highlight-brand-primary;
   }
 
-  &:focus {
+  &:focus:enabled {
     outline-color: abstracts.$color-brand-primary;
   }
 
-  &:active {
+  &:active:enabled {
     background-color: abstracts.$color-brand-primary;
     color: abstracts.$color-background;
     box-shadow: 0 0 4px abstracts.$color-brand-primary;
