@@ -68,8 +68,8 @@
     }
 
     &--active {
-      background-color: var(--highlight-button-primary);
-      color: var(--color-text-primary);
+      color: var(--color-project-tab-button-active-class);
+      background-color: var(--color-project-tab-button-active-class-background);
     }
   }
 }
