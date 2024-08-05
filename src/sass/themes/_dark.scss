@@ -11,8 +11,11 @@
   --color-text-form-input: #8987a1;
 
   /* Hover state */
-  --highlight-brand-primary: color.scale(var(--color-brand-primary), $lightness: -30%);
+  --highlight-brand-primary: #1eb2f5;
   --highlight-button-primary: #484e53;
 
   /* Active state */
+
+  /* Fix theme color differences */
+  --color-button-border: #4fc3f7;
 }
