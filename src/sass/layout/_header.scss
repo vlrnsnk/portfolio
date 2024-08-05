@@ -123,11 +123,10 @@
     text-decoration: none;
     color: var(--color-text-primary);
     padding: 10px;
+    @include abstracts.transition(0.2s, color);
 
     &:hover {
       color: var(--color-brand-primary);
-
-      @include abstracts.transition(0.2s, color);
     }
 
     &:active {
