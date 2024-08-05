@@ -52,9 +52,10 @@
     @include abstracts.transition(0.2s, background-color, color, border-color);
 
     &:hover {
-      background-color: var(--highlight-button-primary);
-      color: var(--color-text-primary);
-      box-shadow: 0 0 4px var(--color-text-primary);
+      color: var(--color-project-tab-button-hover);
+      background-color: var(--color-project-tab-button-hover-background);
+      border-color: var(--color-project-tab-button-hover-border);
+      box-shadow: 0 0 4px var(--color-project-tab-button-hover-box-shadow);
     }
 
     &:focus {
