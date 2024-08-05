@@ -28,7 +28,6 @@ if (!window.localStorage.getItem('theme')) {
 body.dataset.theme = theme;
 const themeSwitchIcon = themeSwitch.querySelector('.theme-switch__icon use');
 themeSwitchIcon.href.baseVal = theme === 'dark' ? './img/sprite.svg#sun' : './img/sprite.svg#moon';
-console.log(themeSwitchIcon.href);
 
 /* Settings for DOM elements if JS is enabled */
 
