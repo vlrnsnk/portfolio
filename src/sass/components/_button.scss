@@ -37,17 +37,17 @@
     padding-left: 32px;
   }
 
-  &:hover:enabled {
+  &:hover {
     color: var(--color-brand-primary);
     border-color: var(--highlight-brand-primary);
     box-shadow: 0 0 4px var(--highlight-brand-primary);
   }
 
-  &:focus:enabled {
+  &:focus {
     outline-color: var(--color-brand-primary);
   }
 
-  &:active:enabled {
+  &:active {
     background-color: var(--color-brand-primary);
     color: var(--color-background);
     box-shadow: 0 0 4px var(--color-brand-primary);
