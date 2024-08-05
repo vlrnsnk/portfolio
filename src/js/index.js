@@ -16,6 +16,17 @@ const siteNavigation = document.querySelector('.site-navigation');
 const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
 const themeSwitch = document.querySelector('.theme-switch');
 
+/* Getting and setting current theme */
+
+let theme = window.localStorage.getItem('theme');
+
+if (!window.localStorage.getItem('theme')) {
+  theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  window.localStorage.setItem('theme', theme);
+}
+
+body.dataset.theme = theme;
+
 /* Settings for DOM elements if JS is enabled */
 
 body.style.height = '100%';
@@ -100,7 +111,10 @@ hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
 themeSwitch.addEventListener('click', (event) => {
   event.stopPropagation();
-  console.log('theme switch');
+
+  const newTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+  body.dataset.theme = newTheme;
+  window.localStorage.setItem('theme', newTheme);
 });
 
 /* Add toggle active class on site navigation item */
@@ -177,8 +191,4 @@ contactForm.addEventListener('submit', async (event) => {
     submitResult.classList.remove('contact-form__submit-result--success');
     submitResult.classList.remove('contact-form__submit-result--fail');
   }, 5000);
-});
-
-themeSwitch.addEventListener('click', () => {
-  body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
 });
