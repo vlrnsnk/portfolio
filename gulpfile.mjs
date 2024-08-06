@@ -12,12 +12,12 @@ import cssnano from 'cssnano';
 import sourcemap from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
-import terser from 'gulp-terser';
 import ghPages from 'gulp-gh-pages';
 import webp from 'gulp-webp';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
 import svgstore from 'gulp-svgstore';
 import svgmin from 'gulp-svgmin';
+import webpack from 'webpack-stream';
 
 /* Run BrowserSync server */
 
@@ -48,12 +48,17 @@ task('styles', () => {
     .pipe(browserSync.stream());
 });
 
-/* Copy and minify JavaScript */
+/* Bundle JavaScript modules */
 
 task('scripts', () => {
-  return src('src/js/index.js')
-    // .pipe(terser())
-    .pipe(rename('index.min.js'))
+  return src('src/js/main.js')
+    .pipe(webpack({
+      // mode: 'development',
+      mode: 'production',
+      output: {
+        filename: 'main.min.js',
+      },
+    }))
     .pipe(dest('build/js'))
     .pipe(browserSync.stream());
 });

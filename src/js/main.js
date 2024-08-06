@@ -16,6 +16,8 @@ const siteNavigation = document.querySelector('.site-navigation');
 const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
 const themeSwitch = document.querySelector('.theme-switch');
 
+import { hamburgerClickHandler } from "./handlers.js";
+
 /* Getting and setting current theme */
 
 let theme = window.localStorage.getItem('theme');
@@ -64,14 +66,6 @@ const showProjectsByType = (type) => {
       project.style.display = 'none';
     }
   });
-};
-
-const hamburgerClickHandler = () => {
-  mobileMenu.classList.toggle('main-navigation__wrapper--active');
-  hamburger.classList.toggle('hamburger--cross');
-  hamburgerWrapper.classList.toggle('hamburger-wrapper--active');
-
-  body.style.overflow = body.style.overflow !== 'hidden' ? 'hidden' : 'auto';
 };
 
 const removeIntroScreen = () => {

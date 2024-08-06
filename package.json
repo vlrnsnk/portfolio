@@ -22,12 +22,12 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
-    "gulp-terser": "^2.1.0",
     "gulp-webp": "^5.0.0",
     "postcss": "^8.4.39",
     "sass": "^1.77.8",
     "stylelint": "^16.7.0",
-    "stylelint-config-htmlacademy": "^4.2.3"
+    "stylelint-config-htmlacademy": "^4.2.3",
+    "webpack-stream": "^7.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
