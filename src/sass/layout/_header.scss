@@ -71,7 +71,7 @@
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 1.375;
-  padding: 7px 0px 8px 8px;
+  padding: 7px 0 8px 8px;
 
   &:focus {
     outline-color: var(--color-brand-primary);
@@ -123,6 +123,7 @@
     text-decoration: none;
     color: var(--color-text-primary);
     padding: 10px;
+
     @include abstracts.transition(0.2s, color);
 
     &:hover {
