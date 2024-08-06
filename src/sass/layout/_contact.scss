@@ -100,7 +100,7 @@
     &__button {
       width: 100%;
       border-radius: 10px;
-      background-color: var(--color-text-primary);
+      background-color: var(--contact-form-button-background-color);
       color: var(--color-background);
       border: none;
 
@@ -111,7 +111,8 @@
       }
 
       &:hover:enabled {
-        box-shadow: 0 0 4px var(--color-text-primary);
+        // box-shadow: 0 0 4px var(--color-text-primary);
+        box-shadow: 0 0 4px var(--color-brand-primary);
       }
 
       &:active:enabled {
