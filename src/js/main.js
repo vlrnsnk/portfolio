@@ -1,7 +1,6 @@
 const intro = document.querySelector('.intro');
 const hero = document.querySelector('.hero');
 const about = document.querySelector('.about');
-
 const tabsList = document.querySelector('.projects__tab-list');
 const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
@@ -10,11 +9,12 @@ const contactForm = document.querySelector('.contact-form');
 const contactFormButton = contactForm.querySelector('.contact-form__button');
 const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
-const themeSwitch = document.querySelector('.theme-switch');
 
-import { hamburgerWrapper, body } from "./modules/variables.js";
+
+import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon } from "./modules/variables.js";
 import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
+import { themeSwitchClickHandler } from "./modules/theme-switch.js";
 
 /* Getting and setting current theme */
 
@@ -26,7 +26,6 @@ if (!window.localStorage.getItem('theme')) {
 }
 
 body.dataset.theme = theme;
-const themeSwitchIcon = themeSwitch.querySelector('.theme-switch__icon use');
 themeSwitchIcon.href.baseVal = theme === 'dark' ? './img/sprite.svg#sun' : './img/sprite.svg#moon';
 
 /* Settings for DOM elements if JS is enabled */
@@ -101,16 +100,9 @@ window.addEventListener('beforeunload', () => {
 
 hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
-/* Add stub theme switch click handler */
+/* Add theme switch click handler */
 
-themeSwitch.addEventListener('click', (event) => {
-  event.stopPropagation();
-
-  const newTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
-  body.dataset.theme = newTheme;
-  window.localStorage.setItem('theme', newTheme);
-  themeSwitchIcon.href.baseVal = newTheme === 'dark' ? './img/sprite.svg#sun' : './img/sprite.svg#moon';
-});
+themeSwitch.addEventListener('click', themeSwitchClickHandler);
 
 /* Add toggle active class on site navigation item */
 
