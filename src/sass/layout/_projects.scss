@@ -179,7 +179,7 @@
     justify-content: end;
     align-self: end;
     padding: 4px 0 4px 10px;
-    color: var(--color-text-primary);
+    color: var(--project-link-color);
 
     @include abstracts.transition(0.2s, color);
 
@@ -188,7 +188,7 @@
     }
 
     &:hover path {
-      color: var(--color-text-primary);
+      color: var(--project-link-hover-path-color);
     }
 
     &:focus {
@@ -219,6 +219,6 @@
   }
 
   &__icon-svg-path {
-    color: var(--highlight-brand-primary);
+    color: var(--project-link-icon-svg-path-color);
   }
 }
