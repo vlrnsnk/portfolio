@@ -12,7 +12,6 @@ import cssnano from 'cssnano';
 import sourcemap from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
-import ghPages from 'gulp-gh-pages';
 import webp from 'gulp-webp';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
 import svgstore from 'gulp-svgstore';
@@ -150,15 +149,6 @@ task('sprite', () => {
     }))
     .pipe(rename('sprite.svg'))
     .pipe(dest('build/img'));
-});
-
-/* Deploy build directory to GitHub Pages */
-
-task('deploy', (done) => {
-  src('build/**/*')
-    .pipe(ghPages());
-
-  done();
 });
 
 /* Run main gulp task */
