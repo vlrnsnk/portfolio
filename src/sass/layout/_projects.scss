@@ -63,8 +63,9 @@
     }
 
     &:active {
-      color: var(--color-brand-primary);
-      border-color: var(--color-brand-primary);
+      color: var(--color-background);
+      background-color: var(--color-brand-primary);
+      border-color: var(--highlight-button-primary);
       box-shadow: 0 0 4px var(--color-brand-primary);
     }
 
