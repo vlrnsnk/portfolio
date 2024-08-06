@@ -87,7 +87,7 @@
 
       &:focus {
         outline-color: var(--color-brand-primary);
-        box-shadow: 0 0 4px var(--color-brand-primary);
+        box-shadow: 0 0 4px var(--contact-form-input-focus-box-shadow-color);
       }
     }
 
