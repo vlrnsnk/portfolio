@@ -69,7 +69,8 @@
       box-shadow: 0 0 4px var(--color-brand-primary);
     }
 
-    &--active {
+    &--active,
+    &--active:hover {
       color: var(--color-project-tab-button-active-class);
       background-color: var(--color-project-tab-button-active-class-background);
     }
