@@ -1,6 +1,4 @@
-const hamburger = document.querySelector('.hamburger');
 const hamburgerWrapper = document.querySelector('.hamburger-wrapper');
-const mobileMenu = document.querySelector('.main-navigation__wrapper');
 const intro = document.querySelector('.intro');
 const hero = document.querySelector('.hero');
 const about = document.querySelector('.about');
@@ -13,10 +11,10 @@ const contactForm = document.querySelector('.contact-form');
 const contactFormButton = contactForm.querySelector('.contact-form__button');
 const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
-const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
 const themeSwitch = document.querySelector('.theme-switch');
 
-import { hamburgerClickHandler } from "./handlers.js";
+import { hamburgerClickHandler } from "./modules/hamburger.js";
+import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 
 /* Getting and setting current theme */
 
@@ -116,18 +114,7 @@ themeSwitch.addEventListener('click', (event) => {
 
 /* Add toggle active class on site navigation item */
 
-siteNavigation.addEventListener('click', (event) => {
-  siteNavigationLinks.forEach((siteNavigationLink) => {
-    if (siteNavigationLink.classList.contains('site-navigation__link--active')) {
-      siteNavigationLink.classList.remove('site-navigation__link--active');
-    }
-  });
-
-  event.target.classList.add('site-navigation__link--active');
-  if (window.screen.width < 992) {
-    hamburgerClickHandler();
-  }
-});
+siteNavigation.addEventListener('click', siteNavigationClickHandler);
 
 /* Deactivate intro on different click/touch/mouse events */
 
