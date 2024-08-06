@@ -2,8 +2,6 @@ const intro = document.querySelector('.intro');
 const hero = document.querySelector('.hero');
 const about = document.querySelector('.about');
 const tabsList = document.querySelector('.projects__tab-list');
-const tabButtons = document.querySelectorAll('.projects__tab-button');
-const projects = document.querySelectorAll('.project__item');
 const viewAllProjects = document.querySelector('#view-all-projects');
 const contactForm = document.querySelector('.contact-form');
 const contactFormButton = contactForm.querySelector('.contact-form__button');
@@ -11,10 +9,11 @@ const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
 
 
-import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon } from "./modules/variables.js";
+import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon, projects } from "./modules/variables.js";
 import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 import { themeSwitchClickHandler } from "./modules/theme-switch.js";
+import { tabListClickHandler } from "./modules/tab-list.js";
 
 /* Getting and setting current theme */
 
@@ -45,25 +44,6 @@ projects.forEach((project) => {
   }
 });
 
-/* Show projects by type of clicked tab */
-
-const showProjectsByType = (type) => {
-  if (type === 'all') {
-    projects.forEach((project) => {
-      project.style.display = 'block';
-    });
-
-    return;
-  }
-
-  projects.forEach((project) => {
-    if (project.dataset.type === type) {
-      project.style.display = 'block';
-    } else {
-      project.style.display = 'none';
-    }
-  });
-};
 
 const removeIntroScreen = () => {
 
@@ -97,36 +77,23 @@ window.addEventListener('beforeunload', () => {
 });
 
 /* Add hamburger click handler */
-
 hamburgerWrapper.addEventListener('click', hamburgerClickHandler);
 
 /* Add theme switch click handler */
-
 themeSwitch.addEventListener('click', themeSwitchClickHandler);
 
 /* Add toggle active class on site navigation item */
-
 siteNavigation.addEventListener('click', siteNavigationClickHandler);
 
 /* Deactivate intro on different click/touch/mouse events */
-
 window.addEventListener('click', removeIntroScreen);
 window.addEventListener('mousemove', removeIntroScreen);
 window.addEventListener('touchmove', removeIntroScreen);
 
 /* Handle tabs switching */
-
-tabsList.addEventListener('click', (event) => {
-  tabButtons.forEach((tabButton) => {
-    tabButton.classList.remove('projects__tab-button--active');
-  });
-
-  event.target.classList.add('projects__tab-button--active');
-  showProjectsByType(event.target.dataset.type);
-});
+tabsList.addEventListener('click', tabListClickHandler);
 
 /* Handle click on 'View All' button */
-
 viewAllProjects.addEventListener('click', () => {
   tabButtons.forEach((tabButton) => {
     tabButton.classList.remove('projects__tab-button--active');
