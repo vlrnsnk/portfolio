@@ -1,8 +1,7 @@
-const hamburgerWrapper = document.querySelector('.hamburger-wrapper');
 const intro = document.querySelector('.intro');
 const hero = document.querySelector('.hero');
 const about = document.querySelector('.about');
-const body = document.querySelector('body');
+
 const tabsList = document.querySelector('.projects__tab-list');
 const tabButtons = document.querySelectorAll('.projects__tab-button');
 const projects = document.querySelectorAll('.project__item');
@@ -13,6 +12,7 @@ const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
 const themeSwitch = document.querySelector('.theme-switch');
 
+import { hamburgerWrapper, body } from "./modules/variables.js";
 import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 

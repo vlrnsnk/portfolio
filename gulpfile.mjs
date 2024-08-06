@@ -60,7 +60,7 @@ task('scripts', () => {
       },
     }))
     .pipe(dest('build/js'))
-    .pipe(browserSync.stream());
+    // .pipe(browserSync.stream());
 });
 
 /* Copy and minify HTML */
@@ -68,7 +68,7 @@ task('scripts', () => {
 task('html', () => {
   return src('src/*.html')
     .pipe(minify({ collapseWhitespace: true }))
-    .pipe(dest('build'))
+    .pipe(dest('build'));
 });
 
 /* Create .webp images from .png and .jpg */
@@ -84,7 +84,7 @@ task('webp', () => {
 task('watch', () => {
   watch('src/sass/**/*.scss', series('styles'));
   watch('src/*.html', series('html'));
-  watch('src/js/*.js', series('scripts'));
+  watch('src/js/**/*.js', series('scripts'));
 });
 
 /* Empty build folder */

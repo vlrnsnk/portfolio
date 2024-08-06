@@ -1,6 +1,5 @@
-import { hamburgerClickHandler, hamburger, mainNavigation } from "./hamburger";
-
-const siteNavigationLinks = document.querySelectorAll('.site-navigation__link');
+import { siteNavigationLinks } from './variables';
+import { hamburgerClickHandler } from "./hamburger";
 
 const siteNavigationClickHandler = (event) => {
   siteNavigationLinks.forEach((siteNavigationLink) => {

@@ -1,5 +1,4 @@
-const hamburger = document.querySelector('.hamburger');
-const mainNavigation = document.querySelector('.main-navigation__wrapper');
+import { mainNavigation, hamburger, hamburgerWrapper, body } from "./variables";
 
 const hamburgerClickHandler = () => {
   mainNavigation.classList.toggle('main-navigation__wrapper--active');
@@ -9,4 +8,4 @@ const hamburgerClickHandler = () => {
   body.style.overflow = body.style.overflow !== 'hidden' ? 'hidden' : 'auto';
 };
 
-export { hamburgerClickHandler, hamburger, mainNavigation };
+export { hamburgerClickHandler };
