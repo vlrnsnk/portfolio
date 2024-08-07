@@ -10,4 +10,6 @@ export const projects = document.querySelectorAll('.project__item');
 export const intro = document.querySelector('.intro');
 export const hero = document.querySelector('.hero');
 export const about = document.querySelector('.about');
-
+export const contactForm = document.querySelector('.contact-form');
+export const contactFormButton = contactForm.querySelector('.contact-form__button');
+export const submitResult = contactForm.querySelector('.contact-form__submit-result');
