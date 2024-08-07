@@ -14,6 +14,7 @@ import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 import { themeSwitchClickHandler } from "./modules/theme-switch.js";
 import { tabListClickHandler } from "./modules/tab-list.js";
+import { viewAllClickHandler } from "./modules/view-all.js";
 
 /* Getting and setting current theme */
 
@@ -37,7 +38,6 @@ about.style.opacity = '0';
 hamburgerWrapper.style.display = 'flex';
 
 /* Hide all projects except for default 'react' type */
-
 projects.forEach((project) => {
   if (project.dataset.type !== 'react') {
     project.style.display = 'none';
@@ -46,9 +46,7 @@ projects.forEach((project) => {
 
 
 const removeIntroScreen = () => {
-
   /* Hide intro screen and show main page content */
-
   intro.style.opacity = 0;
   intro.style.height = 0;
   intro.style.zIndex = -1;
@@ -58,20 +56,17 @@ const removeIntroScreen = () => {
   body.style.overflow = 'auto';
 
   /* Remove event listeners for removing intro screen */
-
   window.removeEventListener('click', removeIntroScreen);
   window.removeEventListener('mousemove', removeIntroScreen);
   window.removeEventListener('touchmove', removeIntroScreen);
 
   /* Timeout for proper animation */
-
   setTimeout(() => {
     intro.classList.add('intro--hidden');
   }, 1000);
 }
 
 /* Scroll to top if page reload further than the first screen */
-
 window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
@@ -94,13 +89,7 @@ window.addEventListener('touchmove', removeIntroScreen);
 tabsList.addEventListener('click', tabListClickHandler);
 
 /* Handle click on 'View All' button */
-viewAllProjects.addEventListener('click', () => {
-  tabButtons.forEach((tabButton) => {
-    tabButton.classList.remove('projects__tab-button--active');
-  });
-
-  showProjectsByType('all');
-});
+viewAllProjects.addEventListener('click', viewAllClickHandler);
 
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
