@@ -10,7 +10,7 @@ const siteNavigationClickHandler = (event) => {
 
   event.target.classList.add('site-navigation__link--active');
 
-  if (window.screen.width < 992) {
+  if (window.screen.width < 992 || window.innerWidth < 992) {
     hamburgerClickHandler();
   }
 };
