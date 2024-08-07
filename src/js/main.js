@@ -1,6 +1,3 @@
-const intro = document.querySelector('.intro');
-const hero = document.querySelector('.hero');
-const about = document.querySelector('.about');
 const tabsList = document.querySelector('.projects__tab-list');
 const viewAllProjects = document.querySelector('#view-all-projects');
 const contactForm = document.querySelector('.contact-form');
@@ -9,12 +6,13 @@ const submitResult = contactForm.querySelector('.contact-form__submit-result');
 const siteNavigation = document.querySelector('.site-navigation');
 
 
-import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon, projects } from "./modules/variables.js";
+import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon, projects, intro, hero, about } from "./modules/variables.js";
 import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 import { themeSwitchClickHandler } from "./modules/theme-switch.js";
 import { tabListClickHandler } from "./modules/tab-list.js";
 import { viewAllClickHandler } from "./modules/view-all.js";
+import { removeIntroScreen } from "./modules/intro-screen.js";
 
 /* Getting and setting current theme */
 
@@ -29,7 +27,6 @@ body.dataset.theme = theme;
 themeSwitchIcon.href.baseVal = theme === 'dark' ? './img/sprite.svg#sun' : './img/sprite.svg#moon';
 
 /* Settings for DOM elements if JS is enabled */
-
 body.style.height = '100%';
 body.style.overflow = 'hidden';
 intro.style.display = 'flex';
@@ -43,28 +40,6 @@ projects.forEach((project) => {
     project.style.display = 'none';
   }
 });
-
-
-const removeIntroScreen = () => {
-  /* Hide intro screen and show main page content */
-  intro.style.opacity = 0;
-  intro.style.height = 0;
-  intro.style.zIndex = -1;
-  hero.style.opacity = 1;
-  about.style.opacity = 1;
-  body.style.height = 'auto';
-  body.style.overflow = 'auto';
-
-  /* Remove event listeners for removing intro screen */
-  window.removeEventListener('click', removeIntroScreen);
-  window.removeEventListener('mousemove', removeIntroScreen);
-  window.removeEventListener('touchmove', removeIntroScreen);
-
-  /* Timeout for proper animation */
-  setTimeout(() => {
-    intro.classList.add('intro--hidden');
-  }, 1000);
-}
 
 /* Scroll to top if page reload further than the first screen */
 window.addEventListener('beforeunload', () => {
