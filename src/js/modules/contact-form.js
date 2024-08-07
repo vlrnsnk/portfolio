@@ -2,6 +2,8 @@ import { contactForm, contactFormButton, submitResult } from "./variables";
 
 const contactFormSubmitHandler = async (event) => {
   event.preventDefault();
+
+  contactForm.reset();
   contactFormButton.disabled = true;
   const formData = new FormData(contactForm);
 
