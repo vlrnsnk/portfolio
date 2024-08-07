@@ -20,6 +20,7 @@ const contactFormSubmitHandler = async (event) => {
   .then((json) => {
     submitResult.textContent = 'Your message was sent successfully!';
     submitResult.classList.add('contact-form__submit-result--success');
+    contactFormButton.title = 'Please, wait 5 seconds before submitting new message';
   })
   .catch((error) => {
     submitResult.textContent = 'There was an error sending Your message. Please, try contacting me via e-mail.';
@@ -31,6 +32,7 @@ const contactFormSubmitHandler = async (event) => {
     submitResult.textContent = '';
     submitResult.classList.remove('contact-form__submit-result--success');
     submitResult.classList.remove('contact-form__submit-result--fail');
+    contactFormButton.title = '';
   }, 5000);
 };
 
