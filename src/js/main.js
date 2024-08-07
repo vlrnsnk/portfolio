@@ -1,9 +1,18 @@
-const tabsList = document.querySelector('.projects__tab-list');
-const viewAllProjects = document.querySelector('#view-all-projects');
-const siteNavigation = document.querySelector('.site-navigation');
+import {
+  hamburgerWrapper,
+  body,
+  themeSwitch,
+  themeSwitchIcon,
+  projects,
+  intro,
+  hero,
+  about,
+  contactForm,
+  tabsList,
+  viewAllProjects,
+  siteNavigation,
+} from "./modules/variables.js";
 
-
-import { hamburgerWrapper, body, themeSwitch, themeSwitchIcon, projects, intro, hero, about, contactForm } from "./modules/variables.js";
 import { hamburgerClickHandler } from "./modules/hamburger.js";
 import { siteNavigationClickHandler } from "./modules/site-navigation.js";
 import { themeSwitchClickHandler } from "./modules/theme-switch.js";
@@ -13,7 +22,6 @@ import { removeIntroScreen } from "./modules/intro-screen.js";
 import { contactFormSubmitHandler } from "./modules/contact-form.js";
 
 /* Getting and setting current theme */
-
 let theme = window.localStorage.getItem('theme');
 
 if (!window.localStorage.getItem('theme')) {

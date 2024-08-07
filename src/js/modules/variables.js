@@ -13,3 +13,6 @@ export const about = document.querySelector('.about');
 export const contactForm = document.querySelector('.contact-form');
 export const contactFormButton = contactForm.querySelector('.contact-form__button');
 export const submitResult = contactForm.querySelector('.contact-form__submit-result');
+export const tabsList = document.querySelector('.projects__tab-list');
+export const viewAllProjects = document.querySelector('#view-all-projects');
+export const siteNavigation = document.querySelector('.site-navigation');
