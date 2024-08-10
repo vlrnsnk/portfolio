@@ -7,8 +7,7 @@ const contactFormSubmitHandler = async (event) => {
   contactFormButton.disabled = true;
   const formData = new FormData(contactForm);
 
-  await fetch('http://localhost:8080/contact-form-handler.php', {
-  // await fetch('http://vlrnsnk.rf.gd/contact-form-handler.php', {
+  await fetch('https://vlrnsnk.com/contact-form-handler.php', {
     method: 'POST',
     body: formData,
   })
