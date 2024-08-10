@@ -3,9 +3,9 @@ import { contactForm, contactFormButton, submitResult } from "./variables";
 const contactFormSubmitHandler = async (event) => {
   event.preventDefault();
 
+  const formData = new FormData(contactForm);
   contactForm.reset();
   contactFormButton.disabled = true;
-  const formData = new FormData(contactForm);
 
   await fetch('https://vlrnsnk.com/contact-form-handler.php', {
     method: 'POST',
