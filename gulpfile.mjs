@@ -101,8 +101,8 @@ task('copyFiles', (done) => {
     'src/*.ico',
     'src/fonts/**/*',
     'src/files/**/*',
-    'src/img/favicons/site.webmanifest',
-    'src/img/favicons/browserconfig.xml',
+    'src/site.webmanifest',
+    'src/browserconfig.xml',
   ], {
     encoding: false,
     base: 'src',
