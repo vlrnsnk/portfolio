@@ -5,10 +5,10 @@ A website showcasing my projects as a Full Stack Developer.
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Install](#install)
-- [Lint](#lint)
-- [Run](#run)
-- [Build](#build)
+- [Installation](#install)
+- [Linting](#lint)
+- [Running](#run)
+- [Building](#build)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -26,13 +26,13 @@ This portfolio website highlights the projects and skills I have developed as a 
 - Gulp
 - Stylelint
 
-## Install
+## Installation
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/vlrnsnk/portfolio.git
-   ```
+  ```bash
+  git clone https://github.com/vlrnsnk/portfolio.git
+  ```
 2. Navigate to the project directory:
   ```bash
   cd portfolio
@@ -43,13 +43,13 @@ To set up the project locally, follow these steps:
   npm install
   ```
 
-## Lint
+## Linting
 To lint the project, use the following command:
   ```bash
   npm run lint
   ```
 
-## Run
+## Running
 To run the project locally, use the following command:
   ```bash
   npm run start
@@ -57,7 +57,7 @@ To run the project locally, use the following command:
 
 This will start the development server, and you can view the portfolio at `http://localhost:3000`.
 
-## Build
+## Building
 To create a production build of the project, use the following command:
   ```bash
   npm run build
@@ -71,6 +71,6 @@ Contributions are welcome! If you have any suggestions or improvements, please s
 ## Contact
 Feel free to reach out to me for any questions or collaborations.
 
-- Email: [example\@example.com](mailto:example@example.com?subject=Portfolio)
-- LinkedIn: <http://linkedin.com/in/valeriy-a-a23833310/>
+- Email: [vlrnsnk\@proton.me](mailto:vlrnsnk@proton.me?subject=Portfolio)
+- LinkedIn: <https://linkedin.com/in/valeriy-a-a23833310/>
 - GitHub: <https://github.com/vlrnsnk>
