@@ -6,9 +6,9 @@ A website showcasing my projects as a Full Stack Developer.
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#install)
-- [Linting](#lint)
-- [Running](#run)
-- [Building](#build)
+  - [Linting](#lint)
+  - [Running](#run)
+  - [Building](#build)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -43,13 +43,13 @@ To set up the project locally, follow these steps:
   npm install
   ```
 
-## Linting
+### Linting
 To lint the project, use the following command:
   ```bash
   npm run lint
   ```
 
-## Running
+### Running
 To run the project locally, use the following command:
   ```bash
   npm run start
@@ -57,7 +57,7 @@ To run the project locally, use the following command:
 
 This will start the development server, and you can view the portfolio at `http://localhost:3000`.
 
-## Building
+### Building
 To create a production build of the project, use the following command:
   ```bash
   npm run build
@@ -72,5 +72,5 @@ Contributions are welcome! If you have any suggestions or improvements, please s
 Feel free to reach out to me for any questions or collaborations.
 
 - Email: [vlrnsnk\@proton.me](mailto:vlrnsnk@proton.me?subject=Portfolio)
-- LinkedIn: <https://linkedin.com/in/valeriy-a-a23833310/>
-- GitHub: <https://github.com/vlrnsnk>
+- LinkedIn: [https://linkedin.com/in/valeriy-a-a23833310/](https://linkedin.com/in/valeriy-a-a23833310/)
+- GitHub: [https://github.com/vlrnsnk](https://github.com/vlrnsnk/)
