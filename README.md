@@ -1,7 +1,3 @@
-Here’s your text with the grammar fixed:
-
----
-
 # Portfolio
 
 A website showcasing my projects as a Full Stack Developer.
@@ -89,7 +85,3 @@ Feel free to reach out to me with any questions or for collaborations.
 - Email: [vlrnsnk\@proton.me](mailto:vlrnsnk@proton.me?subject=Portfolio)
 - LinkedIn: [https://linkedin.com/in/valeriy-a-a23833310/](https://linkedin.com/in/valeriy-a-a23833310/)
 - GitHub: [https://github.com/vlrnsnk](https://github.com/vlrnsnk/)
-
----
-
-Let me know if you need any more adjustments!
