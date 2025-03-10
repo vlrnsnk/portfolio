@@ -42,7 +42,7 @@ hamburgerWrapper.style.display = 'flex';
 
 /* Hide all projects except for default 'react' type */
 projects.forEach((project) => {
-  if (project.dataset.type !== 'react') {
+  if (project.dataset.type !== 'full-stack') {
     project.style.display = 'none';
   }
 });
